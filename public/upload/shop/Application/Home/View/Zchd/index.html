@@ -1,0 +1,73 @@
+﻿<extend name="Base/common" />
+
+<block name="main">
+
+<style>
+    .news-content{
+        background: url(__PUBLIC__/home/images/bg2.png) no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<div class="banner banner-3" style="background: url(/Uploads/{$banner.pic}) center 0 no-repeat;"></div>
+
+    
+    
+<div class="news-content">
+<div class="service-nav">
+    <div class="container">
+        <h3>争创活动</h3>
+        <p>您当前的位置 : 争创活动</p>
+    </div>
+</div>
+<div class="news-head">
+<div class="container">
+<div class="service-list" style="background: rgba(8,106,183,1);">
+    <!-- <ul class="clearfix">
+        <li class="list-nav-on"><a href="/News/index/category/1">热点新闻</a></li>
+        <li><a href="/News/index/category/2">媒体报道</a></li>
+        <li><a href="/News/index/category/3">公告信息</a></li>
+        <li><a href="/News/index/category/4">巾帼文明岗</a></li>
+    </ul> -->
+</div>
+<div class="news-list">
+<div class="row">
+<volist name="result" id="data">
+<div class="col-md-4">
+    <div class="news-box">
+        <div class="news-pic">
+            <a href="{:U('Zchd/detail',array('id' => $data['id']))}"><img src="/Uploads/{$data.thumb_pic}" alt="{$data.title}"></a>
+        </div>
+        <div class="news-text">
+            <a href="{:U('Zchd/detail',array('id' => $data['id']))}">
+                <div class="text-top">
+                    <p><!-- {$data.time|date='Y-m-d',###} --></p>
+                    <h3>{$data.title}</h3>
+                </div>
+                <div class="hide-text">
+                    <p>{$data.description}</p>
+                </div>
+                <div class="text-bot">
+                    <p> 查看更多 <span><i class="iconfont"></i></span></p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+</volist>
+
+         </div>
+</div>
+<div class="row myCarousel">{$pagenavi}</div>
+</div>
+
+</div>
+
+</div>
+    
+
+
+<block name="footer">
+</block>
+

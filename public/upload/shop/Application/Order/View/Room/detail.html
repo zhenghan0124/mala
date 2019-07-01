@@ -1,0 +1,122 @@
+<extend name="Base/common" />
+
+<block name="main">
+  <div class="guest-top">
+    <div class="top-link">
+      <div class="container clearfix">
+        <div class="link-home fl">
+          <a href=""><i class="iconfont">&#xe603;</i></a>
+        </div>
+        <div class="link-list fl">
+          <p>您当前的位置：<a href="">首页</a> > <a href="">客房中心</a> > <a href="">高级(商务)双床房</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="guest-super">
+    <div class="container">
+      <h3>高级(商务)双床房</h3>
+      <div class="line-blue">
+
+      </div>
+      <div class="super-slide-box clearfix">
+        <div class="super-slide fl">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href=""><img src="__PUBLIC__/home/img/gsl1.jpg" alt=""></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""><img src="__PUBLIC__/home/img/gsl1.jpg" alt=""></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""><img src="__PUBLIC__/home/img/gsl1.jpg" alt=""></a>
+              </div>
+            </div>
+            <div class="swiper-prev"><a href=""><i class="iconfont">&#xe72e;</i></a></div>
+            <div class="swiper-next"><a href=""><i class="iconfont">&#xe686;</i></a></div>
+          </div>
+        </div>
+        <div class="super-text fl">
+          <p>由国博中心酒店的养生疗愈团队联合德国奢华酒店品牌原创团队共同打造，致力于通过各种特别设计的设施及服务带给您唤活身心愉悦及深度纯净的睡眠。专属提供贴心人文关怀、专业商务中心等一站式人性化服务。拥有331间客房，3000平方米的会议及活动设施，包含花园草坪，中、日、西式餐厅，以及疗愈极具健康养生特色的奢华酒店。(这里临时随便放放的)</p>
+          <div class="super-price clearfix">
+            <div class="list-price fl">
+              <span><i>￥</i>1280</span>
+            </div>
+            <div class="list-book fl">
+              <a href="">立即预定<i class="iconfont">&#xe735;</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="super-service">
+        <ul class="service-item clearfix">
+          <li class="service-item-detail">
+            <p><i class="iconfont">&#xe688;</i>客房设施</p>
+            <ul class="service-list">
+              <li>— 325间客房和6间顶层别墅</li>
+              <li>— 感应灯光系统</li>
+              <li>— Bose蓝牙音箱</li>
+              <li>— 水晶能量地板</li>
+              <li>— 大地之床</li>
+              <li>— 特色功能枕头</li>
+              <li>— 配备“能量石”</li>
+              <li>— “喜马拉雅盐灯”</li>
+              <li>— 纯净舒缓淋浴器</li>
+              <li>— 全自动胶囊咖啡机</li>
+              <li>— 48寸液晶智能电视</li>
+              <li>— 私人冥想室、泡池</li>
+              <li>— 天然石材特制圆形浴缸</li>
+              <li>— 活力汤泉疗愈空间</li>
+            </ul>
+          </li>
+          <li class="service-item-detail">
+            <p><i class="iconfont">&#xe60a;</i>客房设施</p>
+            <ul class="service-list">
+              <li>— 24小时管家服务</li>
+              <li>— 14款不同功效的枕头</li>
+              <li>— 7款疗愈功能的脉轮香薰</li>
+              <li>— 唤醒早茶</li>
+              <li>— 儿童浴袍&拖鞋等细致服务</li>
+              <li>— 快捷办理房间内退房手续</li>
+              <li>— 身体脉轮能量检测</li>
+              <li>— 禾零会工坊课程</li>
+              <li>— 禾零管家提供熨烫服务</li>
+              <li>— 养生欢迎饮品</li>
+              <li>— 促进睡眠的酸奶燕麦粥</li>
+              <li>— 高速无线上网</li>
+              <li>— 能量冥想音乐</li>
+              <li>— 安睡面膜</li>
+            </ul>
+          </li>
+          <li class="service-item-detail">
+            <p><i class="iconfont">&#xe65b;</i>交通/周边景点</p>
+            <ul class="service-list">
+              <li>— 萧山国际机场 (20分钟车程)</li>
+              <li>— 杭州东站 (20分钟车程)</li>
+              <li>— 杭州站 (15分钟车程)</li>
+              <li>— 杭州南站均在 (15分钟以内)</li>
+              <li>— 钱江新城，钱塘江(10分钟车程)</li>
+              <li>— 奥体中心 (5分钟车程)</li>
+              <li>— 西湖 (20分钟车程)</li>
+            </ul>
+          </li>
+        </ul>
+        <a href="{:U('Room/index')}">返回</a>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="footer">
+  <script src="__PUBLIC__/home/js/swiper-3.4.2.min.js"></script>
+  <script>
+    //swiper
+    var mySwiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: 6000,
+      nextButton: '.swiper-next',
+      prevButton: '.swiper-prev'
+    })
+  </script>
+</block>

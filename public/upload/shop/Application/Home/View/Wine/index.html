@@ -1,0 +1,86 @@
+<extend name="Base/common" />
+
+<block name="main">
+<div id="HeaderBlock"></div><script type="text/javascript">$(document).ready(function(){$("#HeaderBlock").height($("#Header").outerHeight());});</script><style type="text/css">
+#MainBanner{display:block;overflow: hidden;height: 450px;position: relative;}
+#MainBanner #MainBannerBG{display: block;overflow: hidden;position: absolute;left: 0;right: 0;top: 0;height: 450px;}
+@media only screen and (max-width: 1400px){
+#MainBanner{height: 320px;}
+#MainBanner #MainBannerBG{height: 320px;}
+}#PathMenu{display: block;overflow: hidden;position: absolute;left: 0;bottom: 0;right: 0;line-height: 24px;padding: 12px 0;background: url(__PUBLIC__/home/images/00070.png);}
+#PathMenu .PathMenus{display: block;overflow: hidden;line-height: 20px;height: 20px;padding-left: 30px;background: url(__PUBLIC__/home/images/home.png) left center no-repeat;font-size: 13px;color: #888;}
+#PathMenu .PathMenus a{color: #888;}
+#PathMenu .PathMenus a:hover{color: #666;}
+</style>
+<div id="MainBanner">
+    <div id="MainBannerBG" style="background:url(/Uploads/{$data.pic}) center center no-repeat;background-size:cover;"></div>
+    <div id="PathMenu">
+        <div class="Root">
+            <div class="PathMenus">
+                {$Think.lang.location} : 
+                <a href="/">{$Think.lang.home}</a>
+                                    &gt; <a href="{:U('Wine/index')}">{$Think.lang.wine}</a>
+                            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+function Bscroll(){var offset=$(document).scrollTop();var screenh=$(window).height();if(offset<=screenh){$("#MainBannerBG").css({"top":offset+"px"});}}$(document).ready(function(){$(window).scroll(function(){Bscroll();});Bscroll();});
+</script>
+<div class="LayoutEnum2 LayoutRelative  LayoutVisible" tip="框架"><div class="Root"><div class="LayoutEnum6 LayoutBlock  LayoutVisible" tip="标题">{$Think.lang.wine}<style>.LayoutEnum6{ padding: 15px 30px;font-size: 36px;line-height: 80px;font-weig1ht:bold;color:#222;text-align:center;background:url(__PUBLIC__/home/images/break.png) center bottom no-repeat;padding-bottom:10px; }</style></div><div class="LayoutEnum7 LayoutBlock  LayoutVisible" tip="正文"><div class="Reader">
+{$data.content}</div><style>.LayoutEnum7{ padding: 50px 5px 80px 5px;}</style></div><div class="LayoutEnum8 LayoutBlock  LayoutVisible" tip="相册"><div class="LayoutEnum9 LayoutBlock  LayoutVisible" tip="区块"><style>.LayoutEnum9 .ImgBlocks{display:block;overflow:hidden;position:relative;height:500px;padding-bottom:80px;}.LayoutEnum9 .ImgBlocks .ImgBlock{display:block;overflow:hidden;position:absolute;}#PC .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb1{left:0;top:0;width:595px;height:500px;}#PC .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb2{left:606px;top:0;width:292px;height:245px;}#PC .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb3{left:908px;top:0;width:292px;height:245px;}#PC .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb4{left:606px;top:255px;width:594px;height:245px;}#MO .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb1{padding-bottom:10px;}#MO .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb2{float:left;width:50%;}#MO .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb3{float:right;width:50%;}#MO .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb2 .ImgBlockImg{display:block;overflow:hidden;margin-right:10px;}#MO .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb3 .ImgBlockImg{display:block;overflow:hidden;margin-left:10px;}#MO .LayoutEnum9 .ImgBlocks .ImgBlock.Imgb4{padding-top:10px;clear:both;}</style></div><div class="LayoutEnum10 LayoutBlock  LayoutVisible" tip="轮播"><div class="TheSwper">  
+<!-- Swiper -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <volist name="list" id="vo" key="num">    
+      <div class="swiper-slide">
+        <div class="RA BO SliderItem" style="background:url(/Uploads/{$vo.pic}) center center no-repeat;">
+          <div class="SliderTitle">
+            <div class="SliderTitleText">{$vo.title}</div>
+            <div class="SliderTitlePage"><span class="SPageNow">{$Think.lang.$num}</span>/{$nums}</div>
+            <div class="C"></div>
+          </div>
+        </div>
+      </div>
+    </volist>
+       <!--  <div class="swiper-slide">
+      <div class="RA BO SliderItem" style="background:url(__PUBLIC__/home/images/gallery/3.jpg) center center no-repeat;">
+        <div class="SliderTitle">
+          <div class="SliderTitleText">红酒雪茄屋—KTV</div>
+          <div class="SliderTitlePage"><span class="SPageNow">1</span>/3</div>
+          <div class="C"></div>
+        </div>
+      </div>
+    </div>
+        <div class="swiper-slide">
+      <div class="RA BO SliderItem" style="background:url(__PUBLIC__/home/images/gallery/2.jpg) center center no-repeat;">
+        <div class="SliderTitle">
+          <div class="SliderTitleText">红酒雪茄屋—MTV</div>
+          <div class="SliderTitlePage"><span class="SPageNow">2</span>/3</div>
+          <div class="C"></div>
+        </div>
+      </div>
+    </div>
+        <div class="swiper-slide">
+      <div class="RA BO SliderItem" style="background:url(__PUBLIC__/home/images/gallery/4.jpg) center center no-repeat;">
+        <div class="SliderTitle">
+          <div class="SliderTitleText">红酒雪茄屋—NTV</div>
+          <div class="SliderTitlePage"><span class="SPageNow">3</span>/3</div>
+          <div class="C"></div>
+        </div>
+      </div>
+    </div> -->
+      </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+ </div><style>.LayoutEnum10{  }.LayoutEnum10 .TheSwper{ padding-bottom:80px;border-top:6px solid #999;padding-top:50px; }.LayoutEnum10 .SliderItem{width:1200px;height:600px;margin:0 auto; }.LayoutEnum10 .SliderItem .SliderTitle{display:block;overflow:hidden;position:absolute;left:0;bottom:0;right:0;background:url(images/00060.png);color:#fff;}.LayoutEnum10 .SliderItem .SliderTitle .SliderTitleText{display:block;overflow:hidden;float:left;font-size:18px;color:#fff;margin-left:40px;line-height:30px;padding:15px 0;height:30px;}.LayoutEnum10 .SliderItem .SliderTitle .SliderTitlePage{display:block;overflow:hidden;float:right;font-size:20px;color:#fff;margin-right:30px;line-height:30px;padding:15px 0;height:30px;}.LayoutEnum10 .SliderItem .SliderTitle .SliderTitlePage .SPageNow{color:#f33a3a;font-size:32px;}.LayoutEnum10 .swiper-button-next{width:60px;height:60px;background:url(images/next.png) center center no-repeat;opacity:0.5;}.LayoutEnum10 .swiper-button-next:hover{opacity:0.9;}.LayoutEnum10 .swiper-button-next.swiper-button-disabled{opacity:0.3;}.LayoutEnum10 .swiper-button-prev{width:60px;height:60px;background:url(images/prev.png) center center no-repeat;opacity:0.5;}.LayoutEnum10 .swiper-button-prev:hover{opacity:0.9;}.LayoutEnum10 .swiper-button-prev.swiper-button-disabled{opacity:0.3;}</style><script>$(document).ready(function(){ var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    }); });</script></div><style>.LayoutEnum8{  }</style></div><div class="LayoutClear"></div></div><style>.LayoutEnum2{ padding:30px 0; }</style></div>
+<style type="text/css">
+
+</style>
+<block name="footer">
+</block>

@@ -1,0 +1,114 @@
+<extend name="Base/common" />
+
+<block name="main">
+  <div class="guest-top">
+    <div class="top-link">
+      <div class="container clearfix">
+        <div class="link-home fl">
+          <a href=""><i class="iconfont">&#xe603;</i></a>
+        </div>
+        <div class="link-list fl">
+          <p>您当前的位置：<a href="">首页</a> > <a href="">客房中心</a> > <a href="">客房列表</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="guest-list">
+    <div class="container">
+      <h3>酒店客房预订</h3>
+      <div class="line-blue">
+
+      </div>
+      <volist name="list" id="vo">
+      <div class="list-box clearfix">
+        <div class="list-pic fl">
+          <img src="__PUBLIC__/order/img/gr1.jpg" alt="">
+        </div>
+        <div class="list-text fl clearfix">
+          <div class="list-text-left fl">
+            <h4>{$vo.title}</h4>
+            <p>面积：54 - 59平方米（581 - 635平方尺）</p>
+            <p>景观：迷人市景</p>
+            <p>床型：特大双床房</p>
+            <a href="{:U('Room/detail',array('id'=>$vo['id']))}">查看更多房间信息 >></a>
+          </div>
+          <div class="list-text-right fr clearfix">
+            <div class="list-price fl">
+              <span><i>￥</i>{$vo.webprice}</span>
+            </div>
+            <div class="list-book fl">
+              <a href="{:U('Room/reserve',array('id'=>$vo['id']))}">立即预定<i class="iconfont">&#xe735;</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </volist>
+      <!-- <div class="list-box clearfix">
+        <div class="list-pic fl">
+          <img src="__PUBLIC__/home/img/gr2.jpg" alt="">
+        </div>
+        <div class="list-text fl clearfix">
+          <div class="list-text-left fl">
+            <h4>豪华(商务)双床房</h4>
+            <p>面积：54 - 59平方米（581 - 635平方尺）</p>
+            <p>景观：迷人市景</p>
+            <p>床型：特大双床房</p>
+            <a href="">查看更多房间信息 >></a>
+          </div>
+          <div class="list-text-right fr clearfix">
+            <div class="list-price fl">
+              <span><i>￥</i>980</span>
+            </div>
+            <div class="list-book fl">
+              <a href="">立即预定<i class="iconfont">&#xe735;</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-box clearfix">
+        <div class="list-pic fl">
+          <img src="__PUBLIC__/home/img/gr3.jpg" alt="">
+        </div>
+        <div class="list-text fl clearfix">
+          <div class="list-text-left fl">
+            <h4>高级大床房</h4>
+            <p>面积：54 - 59平方米（581 - 635平方尺）</p>
+            <p>景观：迷人市景</p>
+            <p>床型：特大双床房</p>
+            <a href="">查看更多房间信息 >></a>
+          </div>
+          <div class="list-text-right fr clearfix">
+            <div class="list-price fl">
+              <span><i>￥</i>1580</span>
+            </div>
+            <div class="list-book fl">
+              <a href="">立即预定<i class="iconfont">&#xe735;</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-box clearfix">
+        <div class="list-pic fl">
+          <img src="__PUBLIC__/home/img/gr4.jpg" alt="">
+        </div>
+        <div class="list-text fl clearfix">
+          <div class="list-text-left fl">
+            <h4>行政大床房</h4>
+            <p>面积：54 - 59平方米（581 - 635平方尺）</p>
+            <p>景观：迷人市景</p>
+            <p>床型：特大双床房</p>
+            <a href="">查看更多房间信息 >></a>
+          </div>
+          <div class="list-text-right fr clearfix">
+            <div class="list-price fl">
+              <span><i>￥</i>1880</span>
+            </div>
+            <div class="list-book fl">
+              <a href="">立即预定<i class="iconfont">&#xe735;</i></a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</block>

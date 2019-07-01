@@ -1,0 +1,98 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="__ACTION__" method="post">
+            <div class="form-group">
+              <label>顶部图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-1">
+                    <ul>
+                      <notempty name="data.pic1">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic1}">
+                          <input type="hidden" name="pic1" value="{$data.pic1}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic1"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>顶部图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-2">
+                    <ul>
+                      <notempty name="data.pic2">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic2}">
+                          <input type="hidden" name="pic2" value="{$data.pic2}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic2"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>顶部图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-3">
+                    <ul>
+                      <notempty name="data.pic3">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic3}">
+                          <input type="hidden" name="pic3" value="{$data.pic3}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic3"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <button type="submit" class="btn primary m-b">提交</button>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </block>
+
+                    <block name="footer_common">
+                    <!-- qy-upload -->
+                    <script src="__PUBLIC__/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
+                  <script src="__PUBLIC__/admin/scripts/qy-upload.js"></script>
+                  <script type="text/javascript">
+                    $('.qy-upload-1').qy_upload("{:U('Upload/index',['width'=>1200,'height'=>620])}","pic1",0);
+                    $('.qy-upload-2').qy_upload("{:U('Upload/index',['width'=>1200,'height'=>620])}","pic2",0);
+                    $('.qy-upload-3').qy_upload("{:U('Upload/index',['width'=>1200,'height'=>620])}","pic3",0);
+                  </script>
+
+                  </block>

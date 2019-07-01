@@ -1,0 +1,146 @@
+<extend name="Base/common" />
+
+<block name="main">
+    
+    <include file="Public/nav" />
+
+
+    
+    <div class="detailPage">
+        <div class="bg1">
+            <div class="container " style="padding-bottom: 60px;">
+
+
+                 
+                <div class="bg1">
+                    <div class="container roomInfo" style="padding-top:0">
+                        <div class="bigTitle">
+                            {$Think.lang.news}
+                        </div>
+                        <volist name="result" id="data">
+                        <div class="row myCarousel">
+                            <div class="col-sm-8">
+                                <div class="carousel slide" id="myCarousel">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="/Uploads/{$data.thumb_pic}" alt="First slide" style="width: 100%;">
+                                           
+                                        </div>
+                                        <!-- <div class="item"> -->
+                                            <!-- <img src="__PUBLIC__/home/img/5.jpg" alt="Second slide" style="width: 100%;"> -->
+                                            <!-- <img src="/Uploads/{$data.thumb_pic}" alt="Second slide" style="width: 100%;">
+                                          
+                                        </div> -->
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <eq name="Think.cookie.think_language" value="en-us"><time>{$data.time|date='Y-m-d',###}</time><else/><time>{$data.time|date='Y年m月d日',###}</time></eq>
+                                <div class="title">{$data.title}</div>
+                                <section>
+                                    {$data.description}
+                                </section>
+
+                            </div>
+                            <div class="control" style="width: 33%">
+                                <!-- <a href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                </a>
+                                <a href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </a> -->
+                                <a class="more" href="{:U('detail',array('id' => $data['id']))}">{$Think.lang.more}</a>
+                            </div>
+                        </div>
+                        </volist>
+                        <div class="row myCarousel">{$pagenavi}</div>
+                        <!-- <div class="row myCarousel">
+                            <div class="col-sm-8">
+                                <div class="carousel slide" id="myCarousel">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="__PUBLIC__/home/img/4.jpg" alt="First slide" style="width: 100%;">
+                                           
+                                        </div>
+                                        <div class="item">
+                                            <img src="__PUBLIC__/home/img/5.jpg" alt="Second slide" style="width: 100%;">
+                                          
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <time>2018年6月5日</time>
+                                <div class="title">这里是标题</div>
+                                <section>
+                                    这里是文字说明这里是文字说明这里是文字说明这里是文字说明这里是文字说明这里是文字说明
+                                </section>
+
+                            </div>
+                            <div class="control" style="width: 33%">
+                                <a href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                </a>
+                                <a href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </a>
+                                <a class="more">了解更多</a>
+                            </div>
+                        </div> -->
+
+
+                        <!-- <div class="row myCarousel">
+                            <div class="col-sm-8">
+                                <div class="carousel slide" id="myCarousel2">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="__PUBLIC__/home/img/4.jpg" alt="First slide" style="width: 100%;">
+                                        </div>
+                                        <div class="item">
+                                            <img src="__PUBLIC__/home/img/5.jpg" alt="Second slide" style="width: 100%;">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <time>2018年6月5日</time>
+                                <div class="title">这里是标题</div>
+                                <section>
+                                    这里是文字说明这里是文字说明这里是文字说明这里是文字说明这里是文字说明这里是文字说明
+                                </section>
+
+                            </div>
+                            <div class="control" style="width: 33%">
+                                <a href="#myCarousel2" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                </a>
+                                <a href="#myCarousel2" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </a>
+                                <a class="more">了解更多</a>
+                            </div>
+                        </div>
+ -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<block name="footer">
+</block>
+
+
+
+
+
+

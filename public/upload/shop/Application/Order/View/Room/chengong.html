@@ -1,0 +1,63 @@
+<extend name="Base/common" />
+
+<block name="main">
+  <div class="guest-top">
+    <div class="top-link">
+      <div class="container clearfix">
+        <div class="link-home fl">
+          <a href=""><i class="iconfont">&#xe603;</i></a>
+        </div>
+        <div class="link-list fl">
+          <p>您当前的位置：<a href="">首页</a> > <a href="">客房中心</a> > <a href="">客房列表</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form action="" method="POST">
+  <div class="guest-pay">
+    <div class="container">
+      <div class="room-reserve">
+          <div class="reserve-stage clearfix">
+            <div class="reserve-stage-box fl">
+              <div class="reserve-stage-li">1</div><span>选择房型</span>
+            </div>
+            <div class="reserve-stage-box fl">
+              <div class="reserve-stage-li">2</div><span>填写订单</span>
+            </div>
+            <div class="reserve-stage-box fl">
+              <div class="reserve-stage-li">3</div><span>付款方式</span>
+            </div>
+            <div class="reserve-stage-box reserve-stage-box-on fl">
+              <div class="reserve-stage-li reserve-stage-li-on">4</div><span>预订成功</span>
+            </div>
+
+          </div>
+          <div class="reserve-detail clearfix">
+            <div class="reserve-detail-left fl">
+              <div class="order-form-item-total"><h3>订单信息</h3></div>
+              <br />
+              <div class="order-form-item-total-tips" style="font-weight:bold;">预订房型 ：<span>{$order['style']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">入住日期 ：<span>{$btime}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">离店日期 ：<span>{$etime}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">房间数&nbsp;&nbsp;&nbsp; ：<span>{$order['nums']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">预定手机 ：<span>{$order['mobile']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">预订人&nbsp;&nbsp;&nbsp; ：<span>{$order['name']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">备注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<span>{$order['info']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">总价格&nbsp;&nbsp;&nbsp; ：<span>{$order['sum_price']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">订单号&nbsp;&nbsp;&nbsp; ：<span>{$order['confirmationid']}</span></div>
+              <div class="order-form-item-total-tips" style="font-weight:bold;">支付方式 ：<span>{$paytype}</span></div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+  </form>
+</block>
+
+<block name="footer">
+  <script type="text/javascript" src="__PUBLIC__/home/js/jquery.spinner.js"></script>
+  <script type="text/javascript">
+  $('.spinner').spinner();
+  </script>
+</block>

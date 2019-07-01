@@ -1,0 +1,125 @@
+/*
+ *千叶科技补充css
+**/
+
+
+/*公共*/
+ul{
+  padding-left: 0;
+}
+ul li{
+  list-style: none;
+}
+.form-group:last-child{
+  margin-bottom: 0;
+}
+
+
+/*上传图片*/
+.upload-pic li{
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.upload-pic li .attachment-title{
+  position: absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  font-size: 12px;
+  line-height: 22px;
+  max-height: 44px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+}
+.upload-pic .qy-upload-text{
+  margin-top: 10px;
+}
+.upload-pic .qy-upload-text .form-control{
+  padding: 0;
+}
+.upload-pic li .qy-upload-del{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff0000;
+  color: #fff;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.upload-pic li .qy-upload-del .iconfont{
+  font-size: 12px;
+}
+.upload-pic li img{
+  max-width: 100%;
+  height: 100px;
+}
+.upload-pic li.upload-pic-wrap{
+  border: 3px dashed #ccc;
+  position: relative;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+}
+.upload-pic li.upload-pic-wrap i{
+  font-size: 30px;
+  color: #ccc;
+}
+.upload-pic-wrap:hover{
+  border-color: #6d5cae;
+}
+.upload-pic-wrap .iconfont{
+  font-size: 50px;
+  color: #ccc;
+}
+.upload-pic-wrap:hover .iconfont{
+  color: #6d5cae;
+}
+.upload-pic-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 94px;
+  height: 94px;
+  opacity: 0;
+}
+
+
+.md-check{
+  margin-right: 15px;
+}
+
+.pagenavi{
+  text-align: center;
+  font-size: 14px;
+}
+.pagenavi a{
+  display: inline-block;
+  background: #fff;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+  margin:0 3px;
+}
+.pagenavi a:hover{
+  background: #ddd;
+}
+.pagenavi span{
+  width: 30px;
+  line-height: 30px;
+  background: #ddd;
+  display: inline-block;
+  border-radius: 2px;
+  margin:0 3px;
+}
