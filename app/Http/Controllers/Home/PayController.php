@@ -267,7 +267,7 @@ class PayController extends Controller
                                                 ]);
                                             if ($changesupport) {
                                                 //执行付款
-                                                $params['amount'] = 1;
+                                                $params['amount'] = 3;
                                                 $params['openid'] = $res->openid;
                                                 $result = $this->sendMoney($params);
 //                                            return $result;
@@ -364,7 +364,7 @@ class PayController extends Controller
                                         ]);
                                     if ($changenewbeans) {
                                         //执行付款
-                                        $params['amount'] = 1;
+                                        $params['amount'] = 3;
                                         $params['openid'] = $res->openid;
                                         $result = $this->sendMoney($params);
                                         $result_code = $result['result_code'];
@@ -465,7 +465,7 @@ class PayController extends Controller
                                 ]);
                             if ($changebeans) {
                                 //执行付款
-                                $params['amount'] = 1;
+                                $params['amount'] = 3;
                                 $params['openid'] = $res->openid;
                                 $result = $this->sendMoney($params);
                                 $result_code = $result['result_code'];
@@ -566,7 +566,7 @@ class PayController extends Controller
 //                return $changesignbeans;
                     if ($changesignbeans) {
                         //执行付款
-                        $params['amount'] = 1;
+                        $params['amount'] = 3;
                         $params['openid'] = $res->openid;
                         $result = $this->sendMoney($params);
 //                    return $result;

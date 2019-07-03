@@ -19,7 +19,6 @@ Route::any('/', function () {
     return view('admin/login/index');
 });
 
-
 //后台路由
 Route::prefix('/admin')->group(function () {
     //测试
@@ -135,6 +134,7 @@ Route::prefix('/home')->group(function () {
     Route::any('/index/qcode', 'Home\ImageController@hbimg');
     //生成代参的二维码
     Route::any('/index/qcodes', 'Home\ImageController@qcode');
+
     //分享生成代参的二维码
     Route::any('/index/shares', 'Home\ImageController@share');
 
@@ -150,20 +150,32 @@ Route::prefix('/home')->group(function () {
 
     //新粉丝
     Route::any('/index/newfan', 'Home\IndexController@newfans');
-
     //获取name
     Route::any('/index/name', 'Home\IndexController@name');
 
-    //测试
-    Route::any('/index/tests', 'Home\IndexController@tests');
+    //获取自己的拉新
+    Route::any('/index/myfans', 'Home\IndexController@huoqu');
 
+    //签到
     Route::any('/index/sign', 'Home\SignController@sign');
 
-    Route::any('/index/signs', 'Home\SignController@source');
-
-    Route::any('/index/signtest', 'Home\SignController@test');
+    //句豆来源
+    Route::any('/index/source', 'Home\SignController@source');
 
     //总句豆
-    Route::any('/index/querys', 'Home\IndexController@query');
+    Route::any('/index/query', 'Home\IndexController@querybeans');
+
+    //商品列表
+    Route::any('/index/mall', 'Home\MallController@mall');
+
+    //兑换红包
+    Route::any('/index/pay', 'Home\PayController@pay');
+    Route::any('/index/paytest', 'Home\PayController@paytest');
+
+//    //脚本，给点过赞评论过得用户加句豆
+//    Route::any('/index/querys', 'Home\IndexController@query');
+
+    //查询是否点过赞或评论
+    Route::any('/index/querys', 'Home\IndexController@querys');
 });
 
