@@ -167,3 +167,5 @@ Route::prefix('/home')->group(function () {
     Route::any('/index/querys', 'Home\IndexController@query');
 });
 
+
+

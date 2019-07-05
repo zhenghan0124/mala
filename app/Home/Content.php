@@ -30,7 +30,7 @@ class Content extends Model
             ->where('recommended','=',2)
             ->where('content.status','=',1)
             ->where('content.audit','=',1)
-            ->orderBy('content.zhiding','desc')
+//            ->orderBy('content.zhiding','desc')
             ->orderBy('content.tjtime','desc')
             ->offset($offset)
             ->limit($limit);

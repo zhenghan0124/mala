@@ -1,0 +1,68 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <a href="{:U('Index/usercontent',array('audit' => 2))}" class="btn btn-fw primary m-b" style="margin-left:10px;background:red">待审核</a><br/>
+  <a href="{:U('Index/usercontent')}" class="btn btn-fw primary m-b" style="margin-left:10px;">全部</a>
+  <volist name="types" id="type">
+  <a href="{:U('Index/usercontent',array('typeid' => $type['id']))}" class="btn btn-fw primary m-b" style="margin-left:10px;">{$type.title}</a>
+  </volist>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>标题</th>
+            <th>文章图片</th>
+            <th>用户昵称</th>
+            <th>用户头像</th>
+            <th>分类</th>
+            <th>审核</th>
+            <th>推荐</th>
+            <th>点赞数|<a href="{:U('Index/usercontent',array('sort' => 2))}" style="color:grey">倒序</a>|<a href="{:U('Index/usercontent',array('sort' => 1))}" style="color:grey">顺序</a></th>
+            <!--&lt;!&ndash;             <th>日期</th>-->
+            <th>发布时间</th>
+            <th>热度推荐</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td><textarea>{$data.title}</textarea></td>
+              <td><img src="{$data.imgurl.0}" width="80"></td>
+              <td>{$data.name}</td>
+              <td><img src="{$data.pic}" width="80"></td>
+              <td>{$data.type}</td>
+              <eq name="data.audit" value="1"><td><a href="{:U('Index/useraudit',array('id' => $data['id'],'audit' => 2))}" style="color:green">已审核</a></td><else/><td><a href="{:U('Index/useraudit',array('id' => $data['id'],'audit' => 1))}" style="color:red">待审核</a></td></eq>
+              <eq name="data.recommended" value="1"><td><a href="{:U('Index/userrecommended',array('id' => $data['id'],'recommended' => 2))}" style="color:red">未推荐</a></td><else/><td><a href="{:U('Index/userrecommended',array('id' => $data['id'],'recommended' => 1))}" style="color:green">已推荐</a></td></eq>
+              <td>{$data.support}</td>
+              <td>{$data.time}</td>
+              <eq name="data.hot" value="1"><td><a href="{:U('Index/userhot',array('id' => $data['id'],'hot' => 0))}" style="color:green">是</a></td><else/><td><a href="{:U('Index/userhot',array('id' => $data['id'],'hot' => 1))}" style="color:red">否</a></td></eq>
+              <!-- <td>
+                <switch name="data.category">
+                  <case value="1">热点新闻</case>
+                  <case value="2">媒体报道</case>
+                  <case value="3">公告信息</case>
+                </switch>
+              </td> -->
+              <!-- <td>{$data.time|date='Y-m-d',###}</td>
+              <td>{$data.rank}</td> -->
+              <td><a href="{:U('edit_usercontent',array('id' => $data['id']))}">查看</a> <a href="{:U('del',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

@@ -1,0 +1,79 @@
+
+<nav class="scroll nav-light">
+    <ul class="nav" ui-nav>
+      <li class="nav-header hidden-folded">
+        <small class="text-muted">管理</small>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Index">class="active"</eq>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">文章管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="{:U('Index/index')}">
+            <span class="nav-text">后台用户管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="{:U('Index/admincontent')}">
+            <span class="nav-text">后台文章管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="{:U('Index/usercontent')}">
+            <span class="nav-text">用户文章管理</span>
+          </a>
+        </li>
+      </ul>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Hot">class="active"</eq>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">热度管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="{:U('Hot/index')}">
+            <span class="nav-text">热度文章列表</span>
+          </a>
+        </li>
+      </ul>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Type">class="active"</eq>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">分类管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="{:U('Type/index')}">
+            <span class="nav-text">分类列表</span>
+          </a>
+        </li>
+      </ul>
+    </ul>
+
+</nav>

@@ -1,0 +1,61 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>标题</th>
+            <th>文章图片</th>
+            <th>用户昵称</th>
+            <th>用户头像</th>
+            <th>分类</th>
+            <th>点赞数</th>
+            <th>审核</th>
+            <th>推荐</th>
+            <!--&lt;!&ndash;             <th>日期</th>-->
+            <th>发布时间</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td><textarea>{$data.title}</textarea></td>
+              <td><img src="{$data.imgurl.0}" width="80"></td>
+              <td>{$data.name}</td>
+              <td><img src="{$data.pic}" width="80"></td>
+              <td>{$data.type}</td>
+              <td>{$data.support}</td>
+              <eq name="data.audit" value="1"><td><a href="#" style="color:green">已审核</a></td><else/><td><a href="#" style="color:red">待审核</a></td></eq>
+              <eq name="data.recommended" value="1"><td><a href="#" style="color:red">未推荐</a></td><else/><td><a href="#" style="color:green">已推荐</a></td></eq>
+              <td>{$data.time}</td>
+              <!-- <td>
+                <switch name="data.category">
+                  <case value="1">热点新闻</case>
+                  <case value="2">媒体报道</case>
+                  <case value="3">公告信息</case>
+                </switch>
+              </td> -->
+              <!-- <td>{$data.time|date='Y-m-d',###}</td>
+              <td>{$data.rank}</td> -->
+              <td><a href="{:U('edit',array('id' => $data['id']))}">查看</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

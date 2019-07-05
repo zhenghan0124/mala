@@ -130,14 +130,30 @@ class IndexController extends Controller
         $limit = isset($_POST['len']) ? $_POST['len'] : 10;
         $offset = ($page - 1) * $limit;
         $content = new Content();
-        $_POST['typeid'] = '11';
+//        $_POST['typeid'] = 11;
         $_POST['openid'] = '1557122526';
         $_POST['uid'] = '1557122526';
+//        var_dump($_POST['typeid']);exit;
         if ($_POST['typeid']) {
             $contents = $content->getContent($offset, $limit, $_POST['typeid']);
         } else {
+
             $contents = $content->getContents($offset, $limit);
         }
+//            var_dump($contents);
+            $type = DB::table('type')
+                ->get();
+//            var_dump($type);exit;
+            foreach ($contents as $value){
+                foreach ($type as $v){
+                    if($value->typeid == $v->id){
+                        $value->typetitle = $v->title;
+                    }
+                }
+            }
+//        }
+//        var_dump($contents);exit;
+//        exit;
         if ($contents) {
             $support = new Support();
             foreach ($contents as $v) {
