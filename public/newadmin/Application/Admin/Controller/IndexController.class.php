@@ -19,6 +19,8 @@ class IndexController extends CommonController{
      * 后台用户管理
      */
     public function index() {
+        $page['title'] = "后台用户列表";
+        $this->assign('page', $page);
         $where = ['type'=>2]; //type:1用户 ，2后台用户
         $count = M('Userinfo')->where($where)->count();
         $Pages = new \Think\Page($count, 25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
@@ -125,46 +127,63 @@ class IndexController extends CommonController{
 
     //用户文章审核
     public function useraudit() {
-            $post = I('get.');
-            $map['id'] = $post['id'];
-            $map['audit'] = $post['audit'];
-            $typeid = $post['typeid'];
-            if($map['audit'] == 1){
-                $message = '审核成功';
-            }else{
-                $message = '取消审核成功';
-            }
-            $count = M('Content') -> save($map);
-            if($count > 0){
-                $this -> success($message, U('Index/usercontent',array('typeid' => $typeid)));
-            }else{
-                $this -> error("失败");
-            }
+        $post = I('post.');
+        $map['id'] = $post['id'];
+        $map['audit'] = $post['audit'];
+//        $typeid = $post['typeid'];
+        if($map['audit'] == 1){
+            $message = '审核成功';
+        }else{
+            $message = '取消审核成功';
+        }
+        $count = M('Content') -> save($map);
+        if($count > 0){
+            $arr=[
+                'status'=>1,
+                'info'=>$message
+            ];
+//            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
+        }else{
+            $arr=[
+                'status'=>0,
+                'info'=>'审核失败'
+            ];
+//            $this -> error("失败");
+        }
+        exit(json_encode($arr));
     }
 
     //用户文章推荐
     public function userrecommended() {
-            $post = I('get.');
-            $map['id'] = $post['id'];
-            $map['recommended'] = $post['recommended'];
-            $map['tjtime'] = time();
-            $typeid = $post['typeid'];
-            if($map['recommended'] == 2){
-                $message = '推荐成功';
-            }else{
-                $message = '取消推荐成功';
-            }
-            $count = M('Content') -> save($map);
-            if($count > 0){
-                $this -> success($message, U('Index/usercontent',array('typeid' => $typeid)));
-            }else{
-                $this -> error("推荐失败");
-            }
+        $post = I('post.');
+        $map['id'] = $post['id'];
+        $map['recommended'] = $post['recommended'];
+        $map['tjtime'] = time();
+        if($map['recommended'] == 2){
+            $message = '推荐成功';
+        }else{
+            $message = '取消推荐成功';
+        }
+        $count = M('Content') -> save($map);
+        if($count > 0){
+            $arr=[
+                'status'=>1,
+                'info'=>$message
+            ];
+//            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
+        }else{
+            $arr=[
+                'status'=>0,
+                'info'=>'审核失败'
+            ];
+//            $this -> error("失败");
+        }
+        exit(json_encode($arr));
     }
 
     //用户文章热度推荐
     public function userhot() {
-        $post = I('get.');
+        $post = I('post.');
         $map['id'] = $post['id'];
         $map['hot'] = $post['hot'];
         if($map['hot'] == 1){
@@ -174,10 +193,19 @@ class IndexController extends CommonController{
         }
         $count = M('Content') -> save($map);
         if($count > 0){
-            $this -> success($message, U('Index/usercontent'));
+            $arr=[
+                'status'=>1,
+                'info'=>$message
+            ];
+//            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
         }else{
-            $this -> error("热度推荐失败");
+            $arr=[
+                'status'=>0,
+                'info'=>'推荐失败'
+            ];
+//            $this -> error("失败");
         }
+        exit(json_encode($arr));
     }
 
     /**
@@ -248,10 +276,10 @@ class IndexController extends CommonController{
 
     //后台文章审核
     public function adminaudit() {
-        $post = I('get.');
+        $post = I('post.');
         $map['id'] = $post['id'];
         $map['audit'] = $post['audit'];
-        $typeid = $post['typeid'];
+//        $typeid = $post['typeid'];
         if($map['audit'] == 1){
             $message = '审核成功';
         }else{
@@ -259,15 +287,24 @@ class IndexController extends CommonController{
         }
         $count = M('Content') -> save($map);
         if($count > 0){
-            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
+            $arr=[
+                'status'=>1,
+                'info'=>$message
+            ];
+//            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
         }else{
-            $this -> error("失败");
+            $arr=[
+                'status'=>0,
+                'info'=>'审核失败'
+            ];
+//            $this -> error("失败");
         }
+        exit(json_encode($arr));
     }
 
     //后台文章推荐
     public function adminrecommended() {
-        $post = I('get.');
+        $post = I('post.');
         $map['id'] = $post['id'];
         $map['recommended'] = $post['recommended'];
         $map['tjtime'] = time();
@@ -278,15 +315,24 @@ class IndexController extends CommonController{
         }
         $count = M('Content') -> save($map);
         if($count > 0){
-            $this -> success($message, u('Index/admincontent'));
+            $arr=[
+                'status'=>1,
+                'info'=>$message
+            ];
+//            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
         }else{
-            $this -> error("推荐失败");
+            $arr=[
+                'status'=>0,
+                'info'=>'审核失败'
+            ];
+//            $this -> error("失败");
         }
+        exit(json_encode($arr));
     }
 
     //后台文章热度推荐
     public function adminhot() {
-        $post = I('get.');
+        $post = I('post.');
         $map['id'] = $post['id'];
         $map['hot'] = $post['hot'];
         if($map['hot'] == 1){
@@ -296,10 +342,19 @@ class IndexController extends CommonController{
         }
         $count = M('Content') -> save($map);
         if($count > 0){
-            $this -> success($message, U('Index/admincontent'));
+            $arr=[
+                'status'=>1,
+                'info'=>$message
+            ];
+//            $this -> success($message, U('Index/admincontent',array('typeid' => $typeid)));
         }else{
-            $this -> error("热度推荐失败");
+            $arr=[
+                'status'=>0,
+                'info'=>'推荐失败'
+            ];
+//            $this -> error("失败");
         }
+        exit(json_encode($arr));
     }
 
     /**
@@ -425,7 +480,6 @@ class IndexController extends CommonController{
     $id = I('get.id');
     $map['id'] = $id;
     $map['status'] = 2;
-    $map =
     $count = M('Content') -> save($map);
 //    $count = M('Content') -> delete($id);
     if($count > 0){

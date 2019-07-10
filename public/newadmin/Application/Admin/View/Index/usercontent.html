@@ -40,26 +40,104 @@
               <td>{$data.name}</td>
               <td><img src="{$data.pic}" width="80"></td>
               <td>{$data.type}</td>
-              <eq name="data.audit" value="1"><td><a href="{:U('Index/useraudit',array('id' => $data['id'],'audit' => 2))}" style="color:green">已审核</a></td><else/><td><a href="{:U('Index/useraudit',array('id' => $data['id'],'audit' => 1))}" style="color:red">待审核</a></td></eq>
-              <eq name="data.recommended" value="1"><td><a href="{:U('Index/userrecommended',array('id' => $data['id'],'recommended' => 2))}" style="color:red">未推荐</a></td><else/><td><a href="{:U('Index/userrecommended',array('id' => $data['id'],'recommended' => 1))}" style="color:green">已推荐</a></td></eq>
+              <eq name="data.audit" value="1"><td><a href="#" id="audit{$data['id']}" onclick="audit({$data['id']},2)" style="color:green">已审核</a></td><else/><td><a href="#" id="audit{$data['id']}" onclick="audit({$data['id']},1)" style="color:red">待审核</a></td></eq>
+              <eq name="data.recommended" value="1"><td><a href="" id="recommended{$data['id']}" onclick="recommend({$data['id']},2)" style="color:red">未推荐</a></td><else/><td><a href="#" id="recommended{$data['id']}" onclick="recommend({$data['id']},1)" style="color:green">已推荐</a></td></eq>
               <td>{$data.support}</td>
               <td>{$data.time}</td>
-              <eq name="data.hot" value="1"><td><a href="{:U('Index/userhot',array('id' => $data['id'],'hot' => 0))}" style="color:green">是</a></td><else/><td><a href="{:U('Index/userhot',array('id' => $data['id'],'hot' => 1))}" style="color:red">否</a></td></eq>
-              <!-- <td>
-                <switch name="data.category">
-                  <case value="1">热点新闻</case>
-                  <case value="2">媒体报道</case>
-                  <case value="3">公告信息</case>
-                </switch>
-              </td> -->
-              <!-- <td>{$data.time|date='Y-m-d',###}</td>
-              <td>{$data.rank}</td> -->
+              <eq name="data.hot" value="1"><td><a href="#" id="hot{$data['id']}" onclick="hot({$data['id']},0)" style="color:green">是</a></td><else/><td><a href="#" id="hot{$data['id']}" onclick="hot({$data['id']},1)" style="color:red">否</a></td></eq>
               <td><a href="{:U('edit_usercontent',array('id' => $data['id']))}">查看</a> <a href="{:U('del',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
             </tr>
           </volist>
           </tbody>
         </table>
       </div>
+      <script type="text/javascript">
+        //提交审核
+        function audit(a,b,){
+          var id=a;
+          var audit=b;
+          var c = 'audit'+a;
+          $.ajax({
+            url:"{:U('Index/adminaudit')}",
+            type:'post',
+            data:{'id':a,'audit':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var aObj = document.getElementById(c);
+                if(aObj.innerText == '已审核'){
+                  aObj.innerText = '待审核';
+                  aObj.style.color = "red";
+                }else{
+                  aObj.innerText = '已审核';
+                  aObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+
+        //推荐
+        function recommend(a,b){
+
+          var id=a;
+          var recommended=b;
+          var c = 'recommended'+a;
+          $.ajax({
+            url:"{:U('Index/adminrecommended')}",
+            type:'post',
+            data:{'id':a,'recommended':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var bObj = document.getElementById(c);
+                if(bObj.innerText == '已推荐'){
+                  bObj.innerText = '未推荐';
+                  bObj.style.color = "red";
+                }else{
+                  bObj.innerText = '已推荐';
+                  bObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+
+        //热度推荐
+        function hot(a,b){
+
+          var id=a;
+          var hot=b;
+          var c = 'hot'+a;
+          $.ajax({
+            url:"{:U('Index/adminhot')}",
+            type:'post',
+            data:{'id':a,'hot':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var bObj = document.getElementById(c);
+                if(bObj.innerText == '是'){
+                  bObj.innerText = '否';
+                  bObj.style.color = "red";
+                }else{
+                  bObj.innerText = '是';
+                  bObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+      </script>
       <div class="pagenavi">
         {$pagenavi}
       </div>

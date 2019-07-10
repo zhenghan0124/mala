@@ -133,13 +133,14 @@ class IndexController extends Controller
 //        $_POST['typeid'] = 11;
         $_POST['openid'] = '1557122526';
         $_POST['uid'] = '1557122526';
-//        var_dump($_POST['typeid']);exit;
-        if ($_POST['typeid']) {
-            $contents = $content->getContent($offset, $limit, $_POST['typeid']);
-        } else {
+//        $_POST['typeid'] = false;
+////        var_dump($_POST['typeid']);exit;
+//        if ($_POST['typeid']) {
+//            $contents = $content->getContent($offset, $limit, $_POST['typeid']);
+//        } else {
 
             $contents = $content->getContents($offset, $limit);
-        }
+//        }
 //            var_dump($contents);
             $type = DB::table('type')
                 ->get();
@@ -152,7 +153,7 @@ class IndexController extends Controller
                 }
             }
 //        }
-//        var_dump($contents);exit;
+        var_dump($contents);exit;
 //        exit;
         if ($contents) {
             $support = new Support();

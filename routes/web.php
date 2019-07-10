@@ -165,6 +165,10 @@ Route::prefix('/home')->group(function () {
 
     //总句豆
     Route::any('/index/querys', 'Home\IndexController@query');
+
+
+    //测试路由
+    Route::any('/index/thumb', 'Home\ImagesController@thumb');
 });
 
 

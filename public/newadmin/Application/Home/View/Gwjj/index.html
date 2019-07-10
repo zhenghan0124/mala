@@ -1,0 +1,41 @@
+﻿<extend name="Base/common" />
+
+<block name="main">
+
+<style>
+    .news-content{
+        background: url(__PUBLIC__/home/images/bg2.png) no-repeat;
+        background-size: cover;
+    }
+</style>
+
+
+
+    <div class="banner banner-3" style="background: url(/Uploads/{$banner.pic}) center 0 no-repeat;"></div>
+
+
+
+    <div class="news-content">
+        <div class="service-nav">
+            <div class="container">
+                <h3>岗位简介</h3>
+                <p>您当前的位置 : 岗位简介</p>
+            </div>
+        </div>
+
+        <div class="news-detail">
+            <div class="container">
+                <h3>岗位简介</h3>
+                <div class="detail-text">
+                    {$about.content}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+<block name="footer">
+</block>

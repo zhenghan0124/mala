@@ -1,0 +1,59 @@
+    <div class="bannerWrap">
+        <div class="navBg">
+            <nav class="main-navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu"><span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i></span></div>
+                            <div class="collapse navbar-collapse" id="main-menu">
+                              <ul class="menu">
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Index">class="active"</eq>><a href="{:U('Index/index')}">{$Think.lang.home}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="About">class="active"</eq>><a href="{:U('About/index')}">{$Think.lang.about}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Room">class="active"</eq>><a href="{:U('Room/index')}">{$Think.lang.room}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Dinner">class="active"</eq>><a href="{:U('Dinner/index')}">{$Think.lang.dinner}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Meeting">class="active"</eq>><a href="{:U('Meeting/index')}">{$Think.lang.meeting}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Business">class="active"</eq>><a href="{:U('Business/index')}">{$Think.lang.business}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Wedding">class="active"</eq>><a href="{:U('Wedding/index')}">{$Think.lang.wedding}</a></li>       
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Job">class="active"</eq>><a href="{:U('Job/index')}">{$Think.lang.hr}</a></li>
+                                  <li <eq name="Think.CONTROLLER_NAME" value="Contact">class="active"</eq>><a href="{:U('Contact/index')}">{$Think.lang.contact}</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="bannerSlide" class="carousel slide">
+            <ol class="carousel-indicators" style="padding-bottom: 21px;">
+              <for start="0" end="$nums">
+                <if condition="$i === 0">
+                    <li data-target="#bannerSlide" data-slide-to="{$i}" class="active"></li>
+                <else/>
+                    <li data-target="#bannerSlide" data-slide-to="{$i}"></li>
+                </if>
+              </for>
+                <!-- <li data-target="#bannerSlide" data-slide-to="0" class="active"></li> -->
+                <!-- <li data-target="#bannerSlide" data-slide-to="1"></li>  -->
+            </ol>
+            <div class="carousel-inner banner">
+              <volist name="data.pic" id="vo">
+                <if condition="$vo === $data1">
+                    <div class="item active">
+                        <img src="/Uploads/{$vo}" />
+                    </div>
+                <else/>
+                    <div class="item">
+                        <img src="/Uploads/{$vo}" />
+                    </div>
+                </if>
+                <!-- <div class="item active">
+                    <img src="/Uploads/{$vo}" />
+                </div> -->
+                <!-- <div class="  item">
+                    <img src="__PUBLIC__/home/img/banner.jpg" />
+                </div> -->
+              </volist>
+            </div>
+        </div>
+
+    </div>

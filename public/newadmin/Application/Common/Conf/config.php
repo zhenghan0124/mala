@@ -16,7 +16,7 @@ return array(
   'DB_PREFIX' => '', // 数据库表前缀
 
   //模块
-  'MODULE_ALLOW_LIST'  => array('Home'),
+  'MODULE_ALLOW_LIST'  => array('Home','Admin'),
   'DEFAULT_MODULE'       =>    'Admin',
 
 

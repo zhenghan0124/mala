@@ -1,0 +1,46 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+
+
+  <div class="banner banner-3"></div>
+  <div class="news-content">
+<div class="service-nav">
+    <div class="container">
+        <h3>岗位风采</h3>
+        <p>您当前的位置 : <a href="">岗位风采</a></p>
+    </div>
+</div>
+    <div class="news-detail">
+      <div class="container">
+        <h3>{$news_info.title}</h3>
+        <p>
+          <!-- <i class="iconfont">&#xe61a;</i>杭州国际博览中心 -->
+          <i class="iconfont">&#xe61d;</i>{$news_info.time|date='Y-m-d',###}
+          <!-- <i class="iconfont">&#xe602;</i>220</p> -->
+        <div class="detail-text">
+          {$news_info.content}
+        </div>
+        <div class="news-alink clearfix">
+          <!-- <div class="alink-left fl">
+            <notempty name="news_prev_info">
+              <p>{$Think.lang.prev_news}：<a href="{:U('detail',array('id' => $news_prev_info['id']))}">{$news_prev_info.title}</a></p>
+            </notempty>
+            <notempty name="news_next_info">
+              <p>{$Think.lang.next_news}：<a href="{:U('detail',array('id' => $news_next_info['id']))}">{$news_next_info.title}</a></p>
+            </notempty>
+          </div> -->
+          <div class="alink-right fr">
+            <a href="javascript:void(0)" onclick="window.history.go(-1);"><img src="http://www.hiechangzhou.com/Public/home/img/aa.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+<block name="footer">
+</block>

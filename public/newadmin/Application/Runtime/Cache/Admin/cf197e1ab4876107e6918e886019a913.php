@@ -126,6 +126,26 @@
           </a>
         </li>
       </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Robot"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">机器人管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Robot/index');?>">
+            <span class="nav-text">机器人列表</span>
+          </a>
+        </li>
+      </ul>
     </ul>
 
 </nav>
@@ -232,16 +252,103 @@
               <td><?php echo ($data["name"]); ?></td>
               <td><img src="<?php echo ($data["pic"]); ?>" width="80"></td>
               <td><?php echo ($data["type"]); ?></td>
-              <?php if(($data["audit"]) == "1"): ?><td><a href="<?php echo U('Index/adminaudit',array('id' => $data['id'],'audit' => 2,'typeid'=> $data['typeid']));?>" style="color:green">已审核</a></td><?php else: ?><td><a href="<?php echo U('Index/adminaudit',array('id' => $data['id'],'audit' => 1,'typeid'=> $data['typeid']));?>" style="color:red">待审核</a></td><?php endif; ?>
-              <?php if(($data["recommended"]) == "1"): ?><td><a href="<?php echo U('Index/adminrecommended',array('id' => $data['id'],'recommended' => 2,'typeid'=> $data['typeid']));?>" style="color:red">未推荐</a></td><?php else: ?><td><a href="<?php echo U('Index/adminrecommended',array('id' => $data['id'],'recommended' => 1,'typeid'=> $data['typeid']));?>" style="color:green">已推荐</a></td><?php endif; ?>
+              <?php if(($data["audit"]) == "1"): ?><td><a href="#" id="audit<?php echo ($data['id']); ?>" onclick="audit(<?php echo ($data['id']); ?>,2)" style="color:green">已审核</a></td><?php else: ?><td><a href="#" id="audit<?php echo ($data['id']); ?>" onclick="audit(<?php echo ($data['id']); ?>,1)" style="color:red">待审核</a></td><?php endif; ?>
+              <?php if(($data["recommended"]) == "1"): ?><td><a href="" id="recommended<?php echo ($data['id']); ?>" onclick="recommend(<?php echo ($data['id']); ?>,2)" style="color:red">未推荐</a></td><?php else: ?><td><a href="#" id="recommended<?php echo ($data['id']); ?>" onclick="recommend(<?php echo ($data['id']); ?>,1)" style="color:green">已推荐</a></td><?php endif; ?>
               <td><?php echo ($data["support"]); ?></td>
               <td><?php echo ($data["time"]); ?></td>
-              <?php if(($data["hot"]) == "1"): ?><td><a href="<?php echo U('Index/adminhot',array('id' => $data['id'],'hot' => 0));?>" style="color:green">是</a></td><?php else: ?><td><a href="<?php echo U('Index/adminhot',array('id' => $data['id'],'hot' => 1));?>" style="color:red">否</a></td><?php endif; ?>
+              <?php if(($data["hot"]) == "1"): ?><td><a href="#" id="hot<?php echo ($data['id']); ?>" onclick="hot(<?php echo ($data['id']); ?>,0)" style="color:green">是</a></td><?php else: ?><td><a href="#" id="hot<?php echo ($data['id']); ?>" onclick="hot(<?php echo ($data['id']); ?>,1)" style="color:red">否</a></td><?php endif; ?>
               <td><a href="<?php echo U('edit_admincontent',array('id' => $data['id']));?>">查看</a> <a href="<?php echo U('del',array('id'=>$data['id']));?>" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
           </tbody>
         </table>
       </div>
+      <script type="text/javascript">
+        //提交审核
+        function audit(a,b,){
+          var id=a;
+          var audit=b;
+          var c = 'audit'+a;
+          $.ajax({
+            url:"<?php echo U('Index/adminaudit');?>",
+            type:'post',
+            data:{'id':a,'audit':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var aObj = document.getElementById(c);
+                if(aObj.innerText == '已审核'){
+                  aObj.innerText = '待审核';
+                  aObj.style.color = "red";
+                }else{
+                  aObj.innerText = '已审核';
+                  aObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+
+        //推荐
+        function recommend(a,b){
+
+          var id=a;
+          var recommended=b;
+          var c = 'recommended'+a;
+          $.ajax({
+            url:"<?php echo U('Index/adminrecommended');?>",
+            type:'post',
+            data:{'id':a,'recommended':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var bObj = document.getElementById(c);
+                if(bObj.innerText == '已推荐'){
+                  bObj.innerText = '未推荐';
+                  bObj.style.color = "red";
+                }else{
+                  bObj.innerText = '已推荐';
+                  bObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+
+        //热度推荐
+        function hot(a,b){
+
+          var id=a;
+          var hot=b;
+          var c = 'hot'+a;
+          $.ajax({
+            url:"<?php echo U('Index/adminhot');?>",
+            type:'post',
+            data:{'id':a,'hot':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var bObj = document.getElementById(c);
+                if(bObj.innerText == '是'){
+                  bObj.innerText = '否';
+                  bObj.style.color = "red";
+                }else{
+                  bObj.innerText = '是';
+                  bObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+      </script>
       <div class="pagenavi">
         <?php echo ($pagenavi); ?>
       </div>

@@ -1,0 +1,40 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <a href="{:U('Robot/add')}" class="btn btn-fw primary m-b" style="margin-left:10px;">添加</a>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>用户昵称</th>
+            <th>用户头像</th>
+            <th>分类</th>
+            <!--<th>操作</th>-->
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td>{$data.name}</td>
+              <td><img src="{$data.photo}" width="80"></td>
+              <td>{$data.types}</td>
+              <!--<td><a href="{:U('edit_admin',array('id' => $data['id']))}">查看</a></td>-->
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

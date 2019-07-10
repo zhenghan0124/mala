@@ -1,0 +1,45 @@
+<extend name="Base/common" />
+
+<block name="main">
+    
+    <include file="Public/nav" />
+
+
+    
+
+
+
+    <div class="detailPage">
+        <div class="bg1">
+            <div class="container " style="padding-bottom: 60px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="bigTitle">{$news_info.title}</div>
+                    </div>
+                    <eq name="Think.cookie.think_language" value="en-us"><time class="newTime">{$news_info.time|date='Y-m-d',###}</time><else/><time class="newTime">{$news_info.time|date='Y年m月d日',###}</time></eq>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="content">
+                        {$news_info.content}
+
+
+                      
+                        <!-- <img src="__PUBLIC__/home/img/1.png" /> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+<block name="footer">
+</block>
+
+
+
+

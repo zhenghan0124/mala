@@ -31,6 +31,7 @@ class Content extends Model
             ->where('content.status','=',1)
             ->where('content.audit','=',1)
 //            ->orderBy('content.zhiding','desc')
+            ->inRandomOrder()
             ->orderBy('content.tjtime','desc')
             ->offset($offset)
             ->limit($limit);
