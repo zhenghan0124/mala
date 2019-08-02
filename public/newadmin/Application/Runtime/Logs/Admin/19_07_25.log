@@ -1,0 +1,595 @@
+[ 2019-07-25T16:08:55+08:00 ] 127.0.0.1 /newadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-25T16:08:55+08:00 ] 127.0.0.1 /newadmin/index.php/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:08:55+08:00 ] 127.0.0.1 /newadmin/index.php/views/blocks/navbar.brand.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Views
+
+[ 2019-07-25T16:09:01+08:00 ] 127.0.0.1 /newadmin/index.php/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( username = 'zhenghan' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-07-25T16:09:01+08:00 ] 127.0.0.1 /newadmin/index.php/Index/admincontent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 221 行.
+NOTIC: [8] Undefined variable: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `content` WHERE `fabutype` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: sort E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 234 行.
+SQL: SELECT * FROM `content` WHERE `fabutype` = 2 AND `status` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `userinfo` ORDER BY id desc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:09:16+08:00 ] 127.0.0.1 /newadmin/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `userinfo` WHERE `type` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `userinfo` WHERE `type` = 2 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: aid E:\mala\public\newadmin\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-25T16:09:17+08:00 ] 127.0.0.1 /newadmin/index.php/Index/admincontent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 221 行.
+NOTIC: [8] Undefined variable: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `content` WHERE `fabutype` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: sort E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 234 行.
+SQL: SELECT * FROM `content` WHERE `fabutype` = 2 AND `status` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `type` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `userinfo` ORDER BY id desc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:09:59+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 463 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:12:25+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 487 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-25T16:12:38+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 487 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:12:39+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 487 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-25T16:13:19+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-07-25T16:13:31+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 486 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-25T16:14:11+08:00 ] 127.0.0.1 /newadmin/index.php/Index/admincontent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 221 行.
+NOTIC: [8] Undefined variable: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `content` WHERE `fabutype` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: sort E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 234 行.
+SQL: SELECT * FROM `content` WHERE `fabutype` = 2 AND `status` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:14:14+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 478 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:14:22+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `content` WHERE `id` = 514 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `type` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '1557122526'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: photo E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 478 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-25T16:14:25+08:00 ] 127.0.0.1 /newadmin/index.php/Index/edit_admincontent/id/514
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0050s ]
+SQL: UPDATE `content` SET `title`='' WHERE `id` = 514 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-25T16:14:26+08:00 ] 127.0.0.1 /newadmin/index.php/Index/admincontent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 221 行.
+NOTIC: [8] Undefined variable: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `content` WHERE `fabutype` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: sort E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 234 行.
+SQL: SELECT * FROM `content` WHERE `fabutype` = 2 AND `status` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `type` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` ORDER BY id desc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-25T16:14:28+08:00 ] 127.0.0.1 /newadmin/index.php/Index/admincontent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 221 行.
+NOTIC: [8] Undefined variable: typeid E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `content` WHERE `fabutype` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: sort E:\mala\public\newadmin\Application\Admin\Controller\IndexController.class.php 第 234 行.
+SQL: SELECT * FROM `content` WHERE `fabutype` = 2 AND `status` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `type` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `type` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `type` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

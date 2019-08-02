@@ -153,7 +153,7 @@ class IndexController extends Controller
                 }
             }
 //        }
-        var_dump($contents);exit;
+//        var_dump($contents);exit;
 //        exit;
         if ($contents) {
             $support = new Support();

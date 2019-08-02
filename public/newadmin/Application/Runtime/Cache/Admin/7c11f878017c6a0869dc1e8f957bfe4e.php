@@ -126,6 +126,51 @@
           </a>
         </li>
       </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Robot"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">机器人管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Robot/index');?>">
+            <span class="nav-text">机器人列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Robot/support');?>">
+            <span class="nav-text">机器人点赞</span>
+          </a>
+        </li>
+      </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Meitu"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Meitu/index');?>">
+            <span class="nav-text">美图列表</span>
+          </a>
+        </li>
+      </ul>
     </ul>
 
 </nav>

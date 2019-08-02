@@ -310,8 +310,10 @@ class AdminController extends BaseController
                 $rootpath = './upload/content/';
                 $imgurl = '';
                 foreach ($request->file('image') as $k => $file) {
-                    $filename = time() . $k . '.png';
-                    $file->move($rootpath, $filename);
+                    $filename = time() . $k . '.jpg';
+                    $path = $rootpath.$filename;
+                    file_put_contents($path,$file,true);
+//                    $file->move($rootpath, $filename);
                     $imgurl .= trim($rootpath, '.') . $filename . ',';
                 }
                 //var_dump($imgurl);exit;

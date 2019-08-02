@@ -1,0 +1,44 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <a href="{:U('Newcontent/add_content')}" class="btn btn-fw primary m-b">添加</a>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>文字</th>
+            <th>图片</th>
+            <th>头像</th>
+            <th>发布时间</th>
+            <th>是否已推荐</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td><textarea>{$data.title}</textarea></td>
+              <td><img src="/newadmin/Uploads/{$data.imgurl}" width="80"></td>
+              <td><img src="{$data.photo}" width="80"></td>
+              <td>{$data.date}</td>
+              <td>{$data.recommended}</td>
+              <td><a href="{:U('Newcontent/edit_content',array('id' => $data['id']))}">编辑</a><a href="{:U('Newcontent/del_content',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

@@ -1,71 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" line="360" />
+    <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" line="362" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72b56398-3876-4655-ba1d-e83fdc91148a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Home/Content.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Home/Content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/ImagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Home/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Home/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/ImageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/newadmin/1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/newadmin/11.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/IndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/IndexController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/admincontent.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/admincontent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/usercontent.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/usercontent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_admincontent.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_admincontent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Public/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Public/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Common/Conf/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Common/Conf/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/22b927bcab08952e9a364dab9343db03.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/22b927bcab08952e9a364dab9343db03.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/3351ed20c46f610d512c8ffc23a71926.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/3351ed20c46f610d512c8ffc23a71926.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/3b6e6feb5346d731534a67390cc3c121.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/3b6e6feb5346d731534a67390cc3c121.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/5305fd38b6e45d780f134648f904166d.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/5305fd38b6e45d780f134648f904166d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/76ab549568037558fc0e476575cd151e.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/76ab549568037558fc0e476575cd151e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/7c11f878017c6a0869dc1e8f957bfe4e.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/7c11f878017c6a0869dc1e8f957bfe4e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/7d6fd11e4747c06873f9f4c2c18525c1.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/7d6fd11e4747c06873f9f4c2c18525c1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/cd615b5c30cf10e0856581ea418e4771.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/cd615b5c30cf10e0856581ea418e4771.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/cf197e1ab4876107e6918e886019a913.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Cache/Admin/cf197e1ab4876107e6918e886019a913.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Logs/Admin/19_07_05.log" beforeDir="false" afterPath="$PROJECT_DIR$/public/newadmin/Application/Runtime/Logs/Admin/19_07_05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560907901891.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560908185455.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560908252546.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560908583574.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560908664622.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560908818191.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560908922977.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560909385974.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560909676685.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560910659548.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560910690258.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560910692829.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560910704493.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560911170617.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560911685515.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560911738442.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912133899.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912139662.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912159346.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912170474.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912190716.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912208835.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912215464.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912220896.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912226992.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560912564659.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560913162517.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560915997513.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560916033764.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560916039955.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560916046264.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560916069472.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560916583629.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560916616957.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560926276535.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560926344483.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560926382579.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560926710196.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560929540673.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560930055679.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1560931542912.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1561096816637.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1561699364117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/img/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/img/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729112285.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729127638.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729146959.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729158949.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729185156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729204141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/1562729245498.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/hb1562728675428.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/hb1562729147143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/hb1562729170819.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/hb1562729186866.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/hb1562729204641.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/hb1562729247667.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562728674.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729158.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729184.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729203.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/qcode/userimg1562729245.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
@@ -169,52 +163,84 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/ImagesController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/NewindexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+            <state relative-caret-position="245">
+              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
-                <element signature="e#45#73#0#PHP" expanded="true" />
+                <element signature="e#45#67#0#PHP" expanded="true" />
+                <element signature="e#7178#9714#0#PHP" />
+                <element signature="e#9731#10993#0#PHP" />
+                <element signature="e#11010#11718#0#PHP" />
+                <element signature="e#11735#12437#0#PHP" />
+                <element signature="e#12454#13836#0#PHP" />
+                <element signature="e#13853#15539#0#PHP" />
+                <element signature="e#15560#16801#0#PHP" />
+                <element signature="e#15345#18246#0#PHP" />
+                <element signature="e#18628#21129#0#PHP" />
+                <element signature="e#16825#22406#0#PHP" />
+                <element signature="e#16818#18546#0#PHP" />
+                <element signature="e#18563#21724#0#PHP" />
+                <element signature="e#21739#24374#0#PHP" />
+                <element signature="e#24398#24782#0#PHP" />
+                <element signature="e#24788#26488#0#PHP" />
+                <element signature="e#26508#28687#0#PHP" />
+                <element signature="e#28693#29619#0#PHP" />
+                <element signature="e#29625#30411#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="file://$USER_HOME$/Desktop/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1554">
-              <caret line="170" column="28" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+            <state relative-caret-position="-2995">
+              <caret line="668" column="1" lean-forward="true" selection-start-line="668" selection-start-column="1" selection-end-line="672" selection-end-column="31" />
+              <folding>
+                <element signature="e#45#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/ImageController.php">
+        <entry file="file://$USER_HOME$/Desktop/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="421" column="14" selection-start-line="421" selection-start-column="14" selection-end-line="421" selection-end-column="40" />
+            <state relative-caret-position="317">
+              <caret line="256" selection-start-line="256" selection-end-line="256" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Home/Controller/IndexController.class.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/NewcontentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
+            <state relative-caret-position="654">
+              <caret line="515" column="44" selection-start-line="515" selection-start-column="44" selection-end-line="515" selection-end-column="44" />
+              <folding>
+                <element signature="e#13559#13603#0#PHP" />
+                <element signature="e#14112#14557#0#PHP" />
+                <element signature="e#13624#14223#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/ImagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-              <folding>
-                <element signature="e#45#73#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="151" selection-start-line="150" selection-start-column="10" selection-end-line="151" />
             </state>
           </provider>
         </entry>
@@ -230,36 +256,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sign</find>
-      <find>test</find>
-      <find>beansource</find>
-      <find>querys</find>
-      <find>login_verify</find>
-      <find>get_admin_info</find>
-      <find>deal_with_item</find>
-      <find>shop</find>
-      <find>location</find>
-      <find>updatecontentone</find>
-      <find>detail</find>
-      <find>$limit</find>
-      <find>foc</find>
-      <find>doindex</find>
-      <find>get</find>
-      <find>mycollection</find>
-      <find>col</find>
-      <find>new Content()</find>
-      <find>contents</find>
+      <find>$text1</find>
+      <find>textalign</find>
       <find>focus</find>
-      <find>dtime</find>
-      <find>audit</find>
-      <find>$guanzhu</find>
-      <find>ti</find>
-      <find>tix</find>
-      <find>添加</find>
-      <find>$arr</find>
-      <find>$fontface</find>
-      <find>qcode</find>
-      <find>qcode_img</find>
+      <find>Focus</find>
+      <find>newfan</find>
+      <find>contentone</find>
+      <find>$type</find>
+      <find>详情</find>
+      <find>collection</find>
+      <find>delcontent</find>
+      <find>focususer</find>
+      <find>add</find>
+      <find>关注</find>
+      <find>support</find>
+      <find>发布</find>
+      <find>personal</find>
+      <find>$data = array();</find>
+      <find>uploadimg</find>
+      <find>posturl</find>
+      <find>beanso</find>
+      <find>user</find>
+      <find>userrelease</find>
+      <find>getPhoto</find>
+      <find>用户发布</find>
+      <find>动态</find>
+      <find>focususers</find>
+      <find>mycollection</find>
+      <find>mycontents</find>
+      <find>newfans</find>
+      <find>拉新</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,57 +294,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/ContentController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/admin/content.blade.php" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/Controller/LoginController.class.php" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Login/index.html" />
-        <option value="$USER_HOME$/Desktop/LoginController.class.php" />
-        <option value="$USER_HOME$/Desktop/config.php" />
-        <option value="$USER_HOME$/Desktop/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Index/edit_usercontent.html" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Index/edit_admincontent.html" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Index/admincontent.html" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Index/usercontent.html" />
-        <option value="$PROJECT_DIR$/public/shop/Public/admin/scripts/qy-upload.js" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Base/common.html" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Common/Conf/config.php" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/public/shop/Application/Admin/View/Public/nav.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Type/add.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/TypeController.class.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Type/edit.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Type/index.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Hot/index.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Hot/edit.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/HotController.class.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/修改/Content.php" />
-        <option value="$USER_HOME$/Desktop/ContentController.php" />
-        <option value="$USER_HOME$/Desktop/web.php" />
         <option value="$USER_HOME$/Desktop/IndexController.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/usercontent.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/admincontent.html" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" />
-        <option value="$PROJECT_DIR$/app/Home/Content.php" />
         <option value="$USER_HOME$/Desktop/Content.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Common/Conf/config.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_admincontent.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_user.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/add_user.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Robot/add.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Robot/index.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Public/nav.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Robot/support.html" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/RobotController.class.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Home/Controller/ImagesController.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Home/Controller/ImagesController1.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/public/newadmin/Application/Home/Controller/ImageController.class.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/ImagesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/ContentController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
+        <option value="$USER_HOME$/Desktop/AdminController.php" />
         <option value="$USER_HOME$/Desktop/ImagesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/PurikuraController.php" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Meitu/index.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Meitu/edit.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/MeituController.class.php" />
+        <option value="$USER_HOME$/Desktop/TutieController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/MeituController.php" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Template/index.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Template/add_type.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Template/edit_type.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Template/template.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Template/add_template.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Template/edit_template.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/TemplateController.class.php" />
+        <option value="$USER_HOME$/Desktop/PurikuraController.php" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_admincontent.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/IndexController.class.php" />
+        <option value="$USER_HOME$/Desktop/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Public/nav.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/index.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/add_content.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/content.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/edit.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/add.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/edit_content.html" />
+        <option value="$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/NewcontentController.class.php" />
+        <option value="$PROJECT_DIR$/app/Home/Type.php" />
+        <option value="$USER_HOME$/Desktop/add.html" />
+        <option value="$USER_HOME$/Desktop/edit.html" />
+        <option value="$USER_HOME$/Desktop/index.html" />
+        <option value="$USER_HOME$/Desktop/add_picture.html" />
+        <option value="$USER_HOME$/Desktop/edit_content.html" />
+        <option value="$USER_HOME$/Desktop/edit_picture.html" />
+        <option value="$USER_HOME$/Desktop/picture.html" />
+        <option value="$USER_HOME$/Desktop/nav.html" />
+        <option value="$USER_HOME$/Desktop/add_short .html" />
+        <option value="$USER_HOME$/Desktop/edit_short .html" />
+        <option value="$USER_HOME$/Desktop/edit_short.html" />
+        <option value="$USER_HOME$/Desktop/add_short.html" />
+        <option value="$USER_HOME$/Desktop/short.html" />
+        <option value="$USER_HOME$/Desktop/content.html" />
+        <option value="$USER_HOME$/Desktop/NewcontentController.class.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/NewcontentController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$USER_HOME$/Desktop/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/NewindexController.php" />
       </list>
     </option>
   </component>
@@ -433,6 +459,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -464,14 +491,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mala" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mala" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
               <item name="Home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -483,7 +502,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -617,18 +635,37 @@
       <workItem from="1562549344612" duration="17538000" />
       <workItem from="1562645004146" duration="26000" />
       <workItem from="1562647465610" duration="19115000" />
-      <workItem from="1562723279590" duration="11388000" />
+      <workItem from="1562723279590" duration="12574000" />
+      <workItem from="1562826766890" duration="5061000" />
+      <workItem from="1562914947668" duration="646000" />
+      <workItem from="1563155946773" duration="11543000" />
+      <workItem from="1563186050459" duration="29000" />
+      <workItem from="1563240892021" duration="19976000" />
+      <workItem from="1563325802976" duration="12265000" />
+      <workItem from="1563417854613" duration="12417000" />
+      <workItem from="1563501770276" duration="12585000" />
+      <workItem from="1563759571300" duration="6630000" />
+      <workItem from="1563781821680" duration="3494000" />
+      <workItem from="1563850615649" duration="3005000" />
+      <workItem from="1563937786022" duration="6751000" />
+      <workItem from="1564022106242" duration="3420000" />
+      <workItem from="1564451197868" duration="1530000" />
+      <workItem from="1564469115909" duration="5603000" />
+      <workItem from="1564534694016" duration="411000" />
+      <workItem from="1564535132699" duration="11389000" />
+      <workItem from="1564623755245" duration="26269000" />
+      <workItem from="1564709240112" duration="15514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="763382000" />
+    <option name="totallyTimeSpent" value="923106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -643,13 +680,14 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021322" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -664,6 +702,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021322" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -673,359 +712,340 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Home/NewindexController.php</url>
+          <line>842</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Hot/edit.html">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Public/admin/libs/jquery/jquery/dist/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Hot/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="-303411">
           <folding>
-            <element signature="n#style#0;n#a#0;n#td#0;n#eq#0;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#eq#0;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#0;n#eq#1;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#eq#1;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/IndexController.class.php" />
-    <entry file="file://$PROJECT_DIR$/app/Home/Focus.php">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/UploadController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state relative-caret-position="72">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Home/Support.php">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/News/edit_news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="67" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/ContentController.php" />
-    <entry file="file://$USER_HOME$/Desktop/IndexController.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/修改/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/add_content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="137" column="34" lean-forward="true" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
+        <state relative-caret-position="3672">
+          <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Content.php">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/admincontent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#th#8;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#th#8;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#0;n#eq#0;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#0;n#eq#1;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#eq#1;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#eq#2;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/index/details.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="111" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/修改/新建文件夹/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Home/Content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CommentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CrontabController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4572">
-          <caret line="130" selection-start-line="2" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6084">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Home/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="914" column="9" selection-start-line="914" selection-start-column="9" selection-end-line="914" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-566">
-          <caret line="200" column="20" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_admincontent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/edit_user.html" />
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/add_user.html" />
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Userinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/NewsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4680">
-          <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Public/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3204">
-          <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/RobotController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Robot/support.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Robot/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="640">
+          <caret line="32" column="114" selection-start-line="32" selection-start-column="114" selection-end-line="32" selection-end-column="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Robot/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="396">
+          <caret line="65" column="2" lean-forward="true" selection-start-line="65" selection-start-column="2" selection-end-line="69" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/NewcontentController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="272" column="13" selection-start-line="272" selection-start-column="13" selection-end-line="272" selection-end-column="13" />
+        <state relative-caret-position="280">
+          <caret line="126" column="31" lean-forward="true" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Home/Controller/ImagesController.php">
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Public/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="166" column="42" selection-start-line="166" selection-start-column="42" selection-end-line="166" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Newcontent/edit_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="34" column="61" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Home/Type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Home/Userinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Content.php" />
+    <entry file="file://$PROJECT_DIR$/app/Home/Support.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/修改/Content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Home/Content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="176" column="31" selection-start-line="176" selection-start-column="31" selection-end-line="176" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-943">
+          <caret line="66" column="58" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/add.html" />
+    <entry file="file://$USER_HOME$/Desktop/index.html" />
+    <entry file="file://$USER_HOME$/Desktop/add_content.html" />
+    <entry file="file://$USER_HOME$/Desktop/add_picture.html" />
+    <entry file="file://$USER_HOME$/Desktop/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/edit_picture.html" />
+    <entry file="file://$USER_HOME$/Desktop/picture.html" />
+    <entry file="file://$USER_HOME$/Desktop/edit_short (2).html" />
+    <entry file="file://$USER_HOME$/Desktop/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="169" column="13" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/edit_short .html" />
+    <entry file="file://$USER_HOME$/Desktop/add_short .html" />
+    <entry file="file://$USER_HOME$/Desktop/edit_short.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/add_short.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Home/Controller/ImagesController1.php" />
+    <entry file="file://$USER_HOME$/Desktop/short.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/PurikuraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2376" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/admincontent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/edit_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="109" column="77" selection-start-line="109" selection-start-column="77" selection-end-line="109" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="267" column="9" lean-forward="true" selection-start-line="267" selection-start-column="9" selection-end-line="267" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/MeituController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/ImagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/NewcontentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="350" column="27" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="670" column="16" selection-start-line="670" selection-start-column="16" selection-end-line="671" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="438" column="8" selection-start-line="438" selection-start-column="8" selection-end-line="438" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/ContentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        <state relative-caret-position="245">
+          <caret line="255" column="36" lean-forward="true" selection-start-line="255" selection-start-column="36" selection-end-line="255" selection-end-column="36" />
           <folding>
             <element signature="e#45#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/修改/Content.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/修改/新建文件夹/Content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/PublicController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="129" column="73" selection-start-line="129" selection-start-column="73" selection-end-line="129" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1188">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/View/Index/usercontent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#th#8;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#th#8;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#0;n#eq#0;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#0;n#eq#1;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#eq#1;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#eq#2;n#tr#0;n#volist#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Admin/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/PayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="291" column="52" lean-forward="true" selection-start-line="291" selection-start-column="52" selection-end-line="294" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Home/Controller/ImageController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="70" column="83" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1554">
-          <caret line="170" column="28" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="421" column="14" selection-start-line="421" selection-start-column="14" selection-end-line="421" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/newadmin/Application/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/ImagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="722">
+          <caret line="236" column="25" selection-start-line="236" selection-start-column="14" selection-end-line="236" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/ImagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="396">
+          <caret line="151" selection-start-line="150" selection-start-column="10" selection-end-line="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="256" selection-start-line="256" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/NewcontentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="515" column="44" selection-start-line="515" selection-start-column="44" selection-end-line="515" selection-end-column="44" />
           <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
+            <element signature="e#13559#13603#0#PHP" />
+            <element signature="e#14112#14557#0#PHP" />
+            <element signature="e#13624#14223#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3309">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2995">
+          <caret line="668" column="1" lean-forward="true" selection-start-line="668" selection-start-column="1" selection-end-line="672" selection-end-column="31" />
+          <folding>
+            <element signature="e#45#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/NewindexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#45#67#0#PHP" expanded="true" />
+            <element signature="e#7178#9714#0#PHP" />
+            <element signature="e#9731#10993#0#PHP" />
+            <element signature="e#11010#11718#0#PHP" />
+            <element signature="e#11735#12437#0#PHP" />
+            <element signature="e#12454#13836#0#PHP" />
+            <element signature="e#13853#15539#0#PHP" />
+            <element signature="e#15560#16801#0#PHP" />
+            <element signature="e#15345#18246#0#PHP" />
+            <element signature="e#18628#21129#0#PHP" />
+            <element signature="e#16825#22406#0#PHP" />
+            <element signature="e#16818#18546#0#PHP" />
+            <element signature="e#18563#21724#0#PHP" />
+            <element signature="e#21739#24374#0#PHP" />
+            <element signature="e#24398#24782#0#PHP" />
+            <element signature="e#24788#26488#0#PHP" />
+            <element signature="e#26508#28687#0#PHP" />
+            <element signature="e#28693#29619#0#PHP" />
+            <element signature="e#29625#30411#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
         </state>
       </provider>
     </entry>

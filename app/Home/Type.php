@@ -25,4 +25,5 @@ class Type extends Model
             return false;
         }
     }
+
 }

@@ -45,6 +45,7 @@ class ImageController extends Controller
         $data = curl_exec($curl);
         //关闭会话
         curl_close($curl);
+
 //        Image::make($data)
 //            ->save('./upload/qcode/1.jpg');
 ////           ->response('png');

@@ -399,78 +399,94 @@ class IndexController extends CommonController{
    * 编辑用户发布文章
    */
   public function edit_usercontent() {
-      //显示标题
-      $page['title'] = "文章信息";
-      $this -> assign('page', $page);
-      $aid = session('aid');
-      $this -> assign('aid', $aid);
-      // var_dump($aid);exit;
+          //显示标题
+          $page['title'] = "文章信息";
+          $this->assign('page', $page);
+          $aid = session('aid');
+          $this->assign('aid', $aid);
+          // var_dump($aid);exit;
 
-      $id = I('get.id');
-      $data = M('Content') -> find($id);
-      $data['imgurl'] = explode(',', $data['imgurl']);
+          $id = I('get.id');
+          $data = M('Content')->find($id);
+          $data['imgurl'] = explode(',', $data['imgurl']);
 //      var_dump($data['uid']);
-      $type = M('Type') -> find($data['typeid']);
+          $type = M('Type')->find($data['typeid']);
 //      var_dump($type);
-      $uid = ['uid'=>$data['uid']];
-      $userinfo = M('Userinfo') -> where($uid) -> select();
+          $uid = ['uid' => $data['uid']];
+          $userinfo = M('Userinfo')->where($uid)->select();
 //      echo M('Userinfo')->getLastSql();
 //      var_dump($userinfo);
-      if(!empty($userinfo['name'])){
-          $data['name'] = $userinfo[0]['name'];
-      }else{
-          $data['name'] = $userinfo[0]['nickname'];
-      }
-      if($userinfo['photo']){
-          $data['pic'] = $userinfo[0]['photo'];
-      }else{
-          $data['pic'] = $userinfo[0]['avatarurl'];
-      }
-      $data['type'] = $type['title'];
+          if (!empty($userinfo['name'])) {
+              $data['name'] = $userinfo[0]['name'];
+          } else {
+              $data['name'] = $userinfo[0]['nickname'];
+          }
+          if ($userinfo['photo']) {
+              $data['pic'] = $userinfo[0]['photo'];
+          } else {
+              $data['pic'] = $userinfo[0]['avatarurl'];
+          }
+          $data['type'] = $type['title'];
 //      $data['photo'] = $type['title'];
 
 //        var_dump($data);exit;
-      $this -> assign('data', $data);
-      $this -> display();
+          $this->assign('data', $data);
+          $this->display();
   }
 
     /**
      * 编辑后台发布文章
      */
     public function edit_admincontent() {
+        if(IS_POST){
+            $post = I('post.');
+//            var_dump($post);exit;
+            //整理提交数据
+            $map['id'] = $post['id'];
+
+            $map['title'] = $post['title'];
+            $count = M('Content') -> save($map);
+
+            if($count > 0){
+                $this -> success("编辑成功", u('admincontent'));
+            }else{
+                $this -> error("编辑失败");
+            }
+        }else {
             //显示标题
             $page['title'] = "文章信息";
-            $this -> assign('page', $page);
+            $this->assign('page', $page);
             $aid = session('aid');
-            $this -> assign('aid', $aid);
+            $this->assign('aid', $aid);
             // var_dump($aid);exit;
 
-        $id = I('get.id');
-        $data = M('Content') -> find($id);
-        $data['imgurl'] = explode(',', $data['imgurl']);
+            $id = I('get.id');
+            $data = M('Content')->find($id);
+            $data['imgurl'] = explode(',', $data['imgurl']);
 //      var_dump($data['uid']);
-        $type = M('Type') -> find($data['typeid']);
+            $type = M('Type')->find($data['typeid']);
 //      var_dump($type);
-        $uid = ['uid'=>$data['uid']];
-        $userinfo = M('Userinfo') -> where($uid) -> select();
+            $uid = ['uid' => $data['uid']];
+            $userinfo = M('Userinfo')->where($uid)->select();
 //      echo M('Userinfo')->getLastSql();
 //      var_dump($userinfo);
-        if(!empty($userinfo['name'])){
-            $data['name'] = $userinfo[0]['name'];
-        }else{
-            $data['name'] = $userinfo[0]['nickname'];
-        }
-        if($userinfo['photo']){
-            $data['pic'] = $userinfo[0]['photo'];
-        }else{
-            $data['pic'] = $userinfo[0]['avatarurl'];
-        }
-        $data['type'] = $type['title'];
+            if (!empty($userinfo['name'])) {
+                $data['name'] = $userinfo[0]['name'];
+            } else {
+                $data['name'] = $userinfo[0]['nickname'];
+            }
+            if ($userinfo['photo']) {
+                $data['pic'] = $userinfo[0]['photo'];
+            } else {
+                $data['pic'] = $userinfo[0]['avatarurl'];
+            }
+            $data['type'] = $type['title'];
 //      $data['photo'] = $type['title'];
 
 //        var_dump($data);exit;
-        $this -> assign('data', $data);
-        $this -> display();
+            $this->assign('data', $data);
+            $this->display();
+        }
     }
 
   /**

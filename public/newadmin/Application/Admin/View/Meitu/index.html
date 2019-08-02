@@ -1,0 +1,76 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <a href="{:U('Meitu/index',array('shenhe' => 1))}" class="btn btn-fw primary m-b" style="margin-left:10px;background:red">待审核</a><br/>
+  <a href="{:U('Meitu/index')}" class="btn btn-fw primary m-b" style="margin-left:10px;">全部</a>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>文字内容</th>
+            <th>美图</th>
+            <th>用户昵称</th>
+            <th>用户头像</th>
+            <th>审核</th>
+            <th>发布时间</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td><textarea>{$data.txt}</textarea></td>
+              <td><img src="{$data.tutieurl}" width="80"></td>
+              <td>{$data.name}</td>
+              <td><img src="{$data.photo}" width="80"></td>
+              <eq name="data.shenhe" value="2"><td><a href="#" id="audit{$data['id']}" onclick="audit({$data['id']},1)" style="color:green">已审核</a></td><else/><td><a href="#" id="audit{$data['id']}" onclick="audit({$data['id']},2)" style="color:red">待审核</a></td></eq>
+              <td>{$data.date}</td>
+              <td><a href="{:U('edit',array('id' => $data['id']))}">查看</a> <a href="{:U('del',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <script type="text/javascript">
+        //提交审核
+        function audit(a,b,){
+          var id=a;
+          var audit=b;
+          var c = 'audit'+a;
+          $.ajax({
+            url:"{:U('Meitu/audit')}",
+            type:'post',
+            data:{'id':a,'shenhe':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var aObj = document.getElementById(c);
+                if(aObj.innerText == '已审核'){
+                  aObj.innerText = '待审核';
+                  aObj.style.color = "red";
+                }else{
+                  aObj.innerText = '已审核';
+                  aObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+      </script>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

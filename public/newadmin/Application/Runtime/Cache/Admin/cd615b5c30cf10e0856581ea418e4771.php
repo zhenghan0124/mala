@@ -154,6 +154,77 @@
           </a>
         </li>
       </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Meitu"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Meitu/index');?>">
+            <span class="nav-text">美图列表</span>
+          </a>
+        </li>
+      </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Template"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">模板管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Template/index');?>">
+            <span class="nav-text">模板分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Template/template');?>">
+            <span class="nav-text">模板列表</span>
+          </a>
+        </li>
+      </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Template"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">新版发布美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Newcontent/index');?>">
+            <span class="nav-text">美图分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Newcontent/template');?>">
+            <span class="nav-text">小句发布列表</span>
+          </a>
+        </li>
+      </ul>
+
     </ul>
 
 </nav>

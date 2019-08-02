@@ -1,0 +1,120 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <a href="{:U('Template/add_template')}" class="btn btn-fw primary m-b" style="margin-left:10px;">添加</a>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>模板</th>
+            <th>图片坐标X</th>
+            <th>图片坐标Y</th>
+            <th>图片宽度</th>
+            <th>图片高度</th>
+            <th>文字坐标X</th>
+            <th>文字坐标Y</th>
+            <th>文字宽度</th>
+
+            <th>行高</th>
+            <th>字号</th>
+
+            <th>分类id</th>
+
+            <th>二维码坐标x</th>
+            <th>二维码坐标y</th>
+            <th>二维码宽度</th>
+            <th>二维码高度</th>
+            <th>用户头像坐标x</th>
+            <th>用户头像坐标y</th>
+            <th>用户头像宽度</th>
+            <th>用户头像高度</th>
+            <th>用户昵称坐标x</th>
+            <th>用户昵称坐标y</th>
+            <th>用户昵称字号</th>
+            <th>日期坐标x</th>
+            <th>日期坐标y</th>
+            <th>日期字号</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td><img src="{$data.url}" width="80"></td>
+              <td>{$data.img_x}</td>
+              <td>{$data.img_y}</td>
+              <td>{$data.img_width}</td>
+              <td>{$data.img_height}</td>
+              <td>{$data.text_x}</td>
+              <td>{$data.text_y}</td>
+              <td>{$data.text_width}</td>
+
+              <td>{$data.hang_height}</td>
+              <td>{$data.font_size}</td>
+
+              <td>{$data.type}</td>
+
+              <td>{$data.qcode_x}</td>
+              <td>{$data.qcode_y}</td>
+              <td>{$data.qcode_width}</td>
+              <td>{$data.qcode_height}</td>
+              <td>{$data.userimg_x}</td>
+              <td>{$data.userimg_y}</td>
+              <td>{$data.userimg_width}</td>
+              <td>{$data.userimg_height}</td>
+              <td>{$data.username_x}</td>
+              <td>{$data.username_y}</td>
+              <td>{$data.username_size}</td>
+              <td>{$data.date_x}</td>
+              <td>{$data.date_y}</td>
+              <td>{$data.date_size}</td>
+
+              <td><a href="{:U('edit_template',array('id' => $data['id']))}">查看</a> <a href="{:U('del_template',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <script type="text/javascript">
+        //提交审核
+        function audit(a,b,){
+          var id=a;
+          var audit=b;
+          var c = 'audit'+a;
+          $.ajax({
+            url:"{:U('Meitu/audit')}",
+            type:'post',
+            data:{'id':a,'shenhe':b},
+            dataType:'json',
+            success:function(re){
+              if(re.status==1){
+                alert(re.info)
+                var aObj = document.getElementById(c);
+                if(aObj.innerText == '已审核'){
+                  aObj.innerText = '待审核';
+                  aObj.style.color = "red";
+                }else{
+                  aObj.innerText = '已审核';
+                  aObj.style.color = "green";
+                }
+              }else{
+                alert(re.info)
+              }
+            }
+          })
+        }
+      </script>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

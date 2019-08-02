@@ -11,28 +11,28 @@
   <!-- for ios 7 style, multi-resolution icon of 152x152 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-  <link rel="apple-touch-icon" href="/shop/Public/admin/assets/images/logo.png">
+  <link rel="apple-touch-icon" href="/newadmin/Public/admin/assets/images/logo.png">
   <meta name="apple-mobile-web-app-title" content="Flatkit">
   <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="/shop/Public/admin/assets/images/logo.png">
+  <link rel="shortcut icon" sizes="196x196" href="/newadmin/Public/admin/assets/images/logo.png">
 
   <!-- style -->
-  <link rel="stylesheet" href="/shop/Public/admin/assets/animate.css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="/shop/Public/admin/assets/glyphicons/glyphicons.css" type="text/css" />
-  <link rel="stylesheet" href="/shop/Public/admin/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="/shop/Public/admin/assets/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/material-design-icons/material-design-icons.css" type="text/css" />
 
-  <link rel="stylesheet" href="/shop/Public/admin/assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-  <!-- build:css /shop/Public/admin/assets/styles/app.min.css -->
-  <link rel="stylesheet" href="/shop/Public/admin/assets/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- build:css /newadmin/Public/admin/assets/styles/app.min.css -->
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/styles/app.css" type="text/css" />
   <!-- endbuild -->
-  <link rel="stylesheet" href="/shop/Public/admin/assets/styles/font.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/styles/font.css" type="text/css" />
   
   <!-- datepicker -->
-  <link rel="stylesheet" type="text/css" href="/shop/Public/admin/libs/jquery/bootstrap-datepicker/css/datepicker.css">
+  <link rel="stylesheet" type="text/css" href="/newadmin/Public/admin/libs/jquery/bootstrap-datepicker/css/datepicker.css">
 
-  <link rel="stylesheet" href="/shop/Public/admin/assets/styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="/newadmin/Public/admin/assets/styles/style.css" type="text/css" />
 </head>
 <body>
   <div class="app" id="app">
@@ -46,8 +46,8 @@
   	  <div class="navbar no-radius">
         <!-- brand -->
         <a class="navbar-brand">
-        	<div ui-include="'/shop/Public/admin/assets/images/logo.svg'"></div>
-        	<img src="/shop/Public/admin/assets/images/logo.png" alt="." class="hide">
+        	<div ui-include="'/newadmin/Public/admin/assets/images/logo.svg'"></div>
+        	<img src="/newadmin/Public/admin/assets/images/logo.png" alt="." class="hide">
         	<span class="hidden-folded inline">管理中心</span>
         </a>
         <!-- / brand -->
@@ -55,7 +55,6 @@
       <div class="hide-scroll" data-flex>
         
 <nav class="scroll nav-light">
-
     <ul class="nav" ui-nav>
       <li class="nav-header hidden-folded">
         <small class="text-muted">管理</small>
@@ -68,12 +67,17 @@
           </span>
         <span class="nav-icon">
             <i class="material-icons">&#xe3fc;
-              <span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
             </i>
           </span>
         <span class="nav-text">文章管理</span>
       </a>
       <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Index/index');?>">
+            <span class="nav-text">后台用户管理</span>
+          </a>
+        </li>
         <li>
           <a href="<?php echo U('Index/admincontent');?>">
             <span class="nav-text">后台文章管理</span>
@@ -84,198 +88,151 @@
             <span class="nav-text">用户文章管理</span>
           </a>
         </li>
-        <!--<li>-->
-          <!--<a href="<?php echo U('Index/about');?>">-->
-            <!--<span class="nav-text">岗位简介</span>-->
-          <!--</a>-->
-        <!--</li>-->
       </ul>
-      </li>
 
-      <!--<li <?php if((CONTROLLER_NAME) == "News"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">新闻动态</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('News/banner');?>">-->
-            <!--<span class="nav-text">新闻动态顶部图片</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('News/index');?>">-->
-            <!--<span class="nav-text">新闻动态</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li>-->
+      <li <?php if((CONTROLLER_NAME) == "Hot"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">热度管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Hot/index');?>">
+            <span class="nav-text">热度文章列表</span>
+          </a>
+        </li>
+      </ul>
 
-      <!--<li <?php if((CONTROLLER_NAME) == "Gwjg"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">岗位建功</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwjg/banner');?>">-->
-            <!--<span class="nav-text">岗位建功顶部图片</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwjg/index');?>">-->
-            <!--<span class="nav-text">岗位建功</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li>-->
+      <li <?php if((CONTROLLER_NAME) == "Type"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">分类管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Type/index');?>">
+            <span class="nav-text">分类列表</span>
+          </a>
+        </li>
+      </ul>
 
-      <!--&lt;!&ndash; <li <?php if((CONTROLLER_NAME) == "Gwfc"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">岗位风采</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwfc/index');?>">-->
-            <!--<span class="nav-text">岗位风采</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li> &ndash;&gt;-->
+      <li <?php if((CONTROLLER_NAME) == "Robot"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">机器人管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Robot/index');?>">
+            <span class="nav-text">机器人列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Robot/support');?>">
+            <span class="nav-text">机器人点赞</span>
+          </a>
+        </li>
+      </ul>
 
-      <!--<li <?php if((CONTROLLER_NAME) == "Gwfx"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">服务社会</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwfx/banner');?>">-->
-            <!--<span class="nav-text">服务社会顶部图片</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwfx/index');?>">-->
-            <!--<span class="nav-text">服务社会</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li>-->
+      <li <?php if((CONTROLLER_NAME) == "Meitu"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Meitu/index');?>">
+            <span class="nav-text">美图列表</span>
+          </a>
+        </li>
+      </ul>
 
-      <!--<li <?php if((CONTROLLER_NAME) == "Gwcx"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">岗位成效</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwcx/banner');?>">-->
-            <!--<span class="nav-text">岗位成效顶部图片</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwcx/index');?>">-->
-            <!--<span class="nav-text">岗位成效</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li>-->
+      <li <?php if((CONTROLLER_NAME) == "Template"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">模板管理</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Template/index');?>">
+            <span class="nav-text">模板分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Template/template');?>">
+            <span class="nav-text">模板列表</span>
+          </a>
+        </li>
+      </ul>
 
-      <!--<li <?php if((CONTROLLER_NAME) == "Zchd"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">争创活动</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Zchd/banner');?>">-->
-            <!--<span class="nav-text">争创活动顶部图片</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Zchd/index');?>">-->
-            <!--<span class="nav-text">争创活动</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li>-->
+      <li <?php if((CONTROLLER_NAME) == "Newcontent"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">新版发布美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Newcontent/index');?>">
+            <span class="nav-text">美图分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Newcontent/content');?>">
+            <span class="nav-text">小句发布列表</span>
+          </a>
+        </li>
+      </ul>
 
-      <!--<li <?php if((CONTROLLER_NAME) == "Gwlb"): ?>class="active"<?php endif; ?>>-->
-      <!--<a>-->
-          <!--<span class="nav-caret">-->
-            <!--<i class="fa fa-caret-down"></i>-->
-          <!--</span>-->
-        <!--<span class="nav-icon">-->
-            <!--<i class="material-icons">&#xe3fc;-->
-              <!--<span ui-include="'/shop/Public/admin/assets/images/i_0.svg'"></span>-->
-            <!--</i>-->
-          <!--</span>-->
-        <!--<span class="nav-text">岗位练兵</span>-->
-      <!--</a>-->
-      <!--<ul class="nav-sub">-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwlb/banner');?>">-->
-            <!--<span class="nav-text">岗位练兵顶部图片</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="<?php echo U('Gwlb/index');?>">-->
-            <!--<span class="nav-text">岗位练兵</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-      <!--</li>-->
+    </ul>
 
 </nav>
-</eq>
       </div>
       <div class="b-t">
         <div class="nav-fold">
           <span class="pull-left">
-            <img src="/shop/Public/admin/assets/images/a0.jpg" alt="..." class="w-40 img-circle">
+            <img src="/newadmin/Public/admin/assets/images/a0.jpg" alt="..." class="w-40 img-circle">
           </span>
           <?php if(($aid) == "1"): ?><span class="clear hidden-folded p-x">
             <span class="block _500">admin</span> <a href="<?php echo U('Account/password');?>"><small class="block text-muted">修改密码</small></a>
@@ -283,7 +240,7 @@
           </span>
           <?php else: ?>
           <span class="clear hidden-folded p-x">
-            <span class="block _500">guobo</span><!--  <a href="<?php echo U('Account/password');?>"><small class="block text-muted">修改密码</small></a> -->
+            <span class="block _500">admin</span><!--  <a href="<?php echo U('Account/password');?>"><small class="block text-muted">修改密码</small></a> -->
             <a href="<?php echo U('Login/loginout');?>"><small class="block text-muted">退出</small></a>
           </span><?php endif; ?>
         </div>
@@ -311,7 +268,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link p-0 clear" href="#" data-toggle="dropdown">
                   <span class="avatar w-32">
-                    <img src="/shop/Public/admin/assets/images/a0.jpg" alt="...">
+                    <img src="/newadmin/Public/admin/assets/images/a0.jpg" alt="...">
                     <i class="on b-white bottom"></i>
                   </span>
                 </a>
@@ -348,37 +305,17 @@
       <div class="box">
         <div class="box-divider m-0"></div>
         <div class="box-body">
-          <form role="form" class="validate" action="/shop/index.php/Admin/Index/edit_admincontent" method="post">
+          <form role="form" class="validate" action="" method="POST">
             <div class="form-group">
               <label>标题</label>
               <div class="row">
                 <div class="col-md-6">
-                  <textarea class="form-control"><?php echo ($data["title"]); ?></textarea>
+                  <textarea class="form-control" name="title"><?php echo ($data["title"]); ?></textarea>
                 </div>
               </div>
             </div>
-            <!-- <div class="form-group">
-              <label>标题（EN）</label>
-              <div class="row">
-                <div class="col-md-6">
-                  <input type="text" name="title_en" class="form-control" value="<?php echo ($data["title_en"]); ?>">
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="form-group">
-              <label>分类</label>
-              <div class="row">
-                <div class="col-md-6">
-                  <select name="category" class="form-control">
-                    <option <?php if(($data["category"]) == "1"): ?>selected<?php endif; ?> value="1">热点新闻</option>
-                    <option <?php if(($data["category"]) == "2"): ?>selected<?php endif; ?> value="2">媒体报道</option>
-                    <option <?php if(($data["category"]) == "3"): ?>selected<?php endif; ?> value="3">公告信息</option>
-                  </select>
-                </div>
-              </div>
-            </div> -->
             <div class="form-group">
-              <label>banner小图（4张）</label>
+              <label>文章图片</label>
               <div class="row">
                 <div class="col-md-12">
                   <div class="qy-upload upload-pic qy-upload-1">
@@ -386,12 +323,12 @@
                       <?php if(!empty($data["imgurl"])): if(is_array($data["imgurl"])): $i = 0; $__LIST__ = $data["imgurl"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
                             <img src="<?php echo ($vo); ?>">
                             <input type="hidden" name="small[]" value="<?php echo ($vo); ?>">
-                            <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                            <!--<span class="qy-upload-del"><i class="fa fa-remove"></i></span>-->
                           </li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-                      <li class="upload-pic-wrap">
-                        <i class="fa fa-plus"></i>
-                        <input type="file" class="upload-pic-button" name="qy_upload">
-                      </li>
+                      <!--<li class="upload-pic-wrap">-->
+                        <!--<i class="fa fa-plus"></i>-->
+                        <!--<input type="file" class="upload-pic-button" name="qy_upload">-->
+                      <!--</li>-->
                     </ul>
                   </div>
                 </div>
@@ -425,9 +362,40 @@
                 </div>
               </div>
             </div>
-
-            <!--<input type="hidden" name="id"value="<?php echo ($data["id"]); ?>">-->
-            <!--<button type="submit" class="btn primary m-b">提交</button>-->
+            <div class="form-group">
+              <label>分类</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="<?php echo ($data["type"]); ?>">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>审核</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <?php if(($data["audit"]) == "1"): ?><input type="text" class="form-control" value="是"><?php else: ?><input type="text" class="form-control" value="否"><?php endif; ?>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>推荐</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <?php if(($data["recommended"]) == "1"): ?><input type="text" class="form-control" value="是"><?php else: ?><input type="text" class="form-control" value="否"><?php endif; ?>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>发布时间</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="<?php echo ($data["time"]); ?>">
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="id"value="<?php echo ($data["id"]); ?>">
+            <button type="submit" class="btn primary m-b">提交</button>
           </form>
         </div>
       </div>
@@ -533,44 +501,44 @@
 <!-- ############ LAYOUT END-->
 
   </div>
-<!-- build:js /shop/Public/admin/scripts/app.html.js -->
+<!-- build:js /newadmin/Public/admin/scripts/app.html.js -->
 <!-- jQuery -->
-  <script src="/shop/Public/admin/libs/jquery/jquery/dist/jquery.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/jquery/dist/jquery.js"></script>
 
 <!-- Bootstrap -->
-  <script src="/shop/Public/admin/libs/jquery/tether/dist/js/tether.min.js"></script>
-  <script src="/shop/Public/admin/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/tether/dist/js/tether.min.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
 <!-- core -->
-  <script src="/shop/Public/admin/libs/jquery/underscore/underscore-min.js"></script>
-  <script src="/shop/Public/admin/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
-  <script src="/shop/Public/admin/libs/jquery/PACE/pace.min.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/underscore/underscore-min.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/PACE/pace.min.js"></script>
 
-  <script src="/shop/Public/admin/scripts/config.lazyload.js"></script>
+  <script src="/newadmin/Public/admin/scripts/config.lazyload.js"></script>
 
-  <script src="/shop/Public/admin/scripts/palette.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-load.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-jp.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-include.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-device.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-form.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-nav.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-screenfull.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-scroll-to.js"></script>
-  <script src="/shop/Public/admin/scripts/ui-toggle-class.js"></script>
+  <script src="/newadmin/Public/admin/scripts/palette.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-load.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-jp.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-include.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-device.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-form.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-nav.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-screenfull.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-scroll-to.js"></script>
+  <script src="/newadmin/Public/admin/scripts/ui-toggle-class.js"></script>
 
-  <script src="/shop/Public/admin/scripts/app.js"></script>
+  <script src="/newadmin/Public/admin/scripts/app.js"></script>
 
   
   <!-- qy-upload -->
-  <script src="/shop/Public/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
-  <script src="/shop/Public/admin/scripts/qy-upload.js"></script>
+  <script src="/newadmin/Public/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
+  <script src="/newadmin/Public/admin/scripts/qy-upload.js"></script>
   <script type="text/javascript">
-    $('.qy-upload-1').qy_upload("/shop/index.php/Admin/upload/?width=450&height=300","img",0);
-    $('.qy-upload-2').qy_upload("/shop/index.php/Admin/upload/?width=450&height=300","pic",0);
+    $('.qy-upload-1').qy_upload("/newadmin/index.php/Admin/upload/?width=450&height=300","img",0);
+    $('.qy-upload-2').qy_upload("/newadmin/index.php/Admin/upload/?width=450&height=300","pic",0);
   </script>
 
-  <script type="text/javascript" src="/shop/Public/admin/libs/jquery/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-  <script type="text/javascript" src="/shop/Public/admin/libs/jquery/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+  <script type="text/javascript" src="/newadmin/Public/admin/libs/jquery/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="/newadmin/Public/admin/libs/jquery/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
   <script>
     $('.form-control-datepicker').datepicker({
       language: "zh-CN",
@@ -579,9 +547,9 @@
     });
   </script>
 
-  <script type="text/javascript" charset="utf-8" src="/shop/Public/admin/libs/js/ueditor/ueditor.config.js"></script>
-  <script type="text/javascript" charset="utf-8" src="/shop/Public/admin/libs/js/ueditor/ueditor.all.min.js"> </script>
-  <script type="text/javascript" charset="utf-8" src="/shop/Public/admin/libs/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/newadmin/Public/admin/libs/js/ueditor/ueditor.config.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/newadmin/Public/admin/libs/js/ueditor/ueditor.all.min.js"> </script>
+  <script type="text/javascript" charset="utf-8" src="/newadmin/Public/admin/libs/js/ueditor/lang/zh-cn/zh-cn.js"></script>
   <script>
     var ue = UE.getEditor('editor');
     var ue_en = UE.getEditor('editor_en');
@@ -589,8 +557,8 @@
 
 
   <!-- ajax -->
-  <!--<script src="/shop/Public/admin/libs/jquery/jquery-pjax/jquery.pjax.js"></script>-->
-  <!--<script src="/shop/Public/admin/scripts/ajax.js"></script>-->
+  <!--<script src="/newadmin/Public/admin/libs/jquery/jquery-pjax/jquery.pjax.js"></script>-->
+  <!--<script src="/newadmin/Public/admin/scripts/ajax.js"></script>-->
 <!-- endbuild -->
 </body>
 </html>

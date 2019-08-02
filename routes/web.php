@@ -169,6 +169,72 @@ Route::prefix('/home')->group(function () {
 
     //测试路由
     Route::any('/index/thumb', 'Home\ImagesController@thumb');
+
+    //图贴
+    Route::any('/index/tutie', 'Home\TutieController@index');
+
+    //美图
+    Route::any('/index/meitu', 'Home\MeituController@index');
+
+    /*
+     * *
+     *
+     * 新版接口
+     */
+
+    //首页获取分类
+    Route::any('/index/newtype', 'Home\NewindexController@donewtype');
+
+    //首页
+    Route::any('/index/newindex', 'Home\NewindexController@donewindex');
+
+    //通过id获取文章
+    Route::any('/index/newcontentone', 'Home\NewindexController@contentone');
+
+    //同专辑推荐
+    Route::any('/index/album', 'Home\NewindexController@album');
+
+    //下载接口
+    Route::any('/index/download', 'Home\NewindexController@download');
+
+    //分享接口
+    Route::any('/index/share', 'Home\NewindexController@share');
+
+    //合集接口
+    Route::any('/index/heji', 'Home\NewindexController@heji');
+
+    //用户中心
+    Route::any('/index/personal', 'Home\NewindexController@personal');
+
+    //关注
+    Route::any('/index/newmyfocus', 'Home\NewindexController@myfocus');
+
+    //我的发布
+    Route::any('/index/mycontents', 'Home\NewindexController@mycontents');
+
+    //用户发布过的图片
+    Route::any('/index/usercontentlist', 'Home\NewindexController@usercontentlist');
+
+    //收藏文章（点击收藏）
+    Route::any('/index/newcollection', 'Home\NewcontentController@collection');
+
+    //取消收藏文章（取消收藏）
+    Route::any('/index/newdelcollection', 'Home\NewcontentController@delcollection');
+
+    //用户发布文章
+    Route::any('/index/newuserrelease', 'Home\NewcontentController@userrelease');
+
+    //用户发布文章（上传图片-image）
+    Route::any('/index/newuploadimg', 'Home\NewcontentController@uploadimg');
+
+    //获取固定图片
+    Route::any('/index/fixedpicture', 'Home\NewcontentController@fixedpicture');
+
+    //获取固定文字
+    Route::any('/index/fixedtext', 'Home\NewcontentController@fixedtext');
+
+    //画图
+    Route::any('/index/shengcheng', 'Home\NewcontentController@shengcheng');
 });
 
 
