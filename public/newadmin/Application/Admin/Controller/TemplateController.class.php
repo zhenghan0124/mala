@@ -126,7 +126,7 @@ class TemplateController extends CommonController{
             $post = I('post.');
 
             //整理提交数据
-            $map['url'] = $post['url'];
+            $map['url'] = $post['pic'];
             $map['img_x'] = $post['img_x'];
             $map['img_y'] = $post['img_y'];
             $map['img_width'] = $post['img_width'];
@@ -137,7 +137,7 @@ class TemplateController extends CommonController{
             $map['muban_background'] = $post['muban_background'];
             $map['hang_height'] = $post['hang_height'];
             $map['font_size'] = $post['font_size'];
-            $map['xiaotu_url'] = $post['xiaotu_url'];
+            $map['xiaotu_url'] = $post['img'];
             $map['type'] = $post['type'];
             $map['qcode'] = $post['qcode'];
             $map['qcode_x'] = $post['qcode_x'];
@@ -164,8 +164,10 @@ class TemplateController extends CommonController{
             }
         }else {
             //显示标题
-            $page['title'] = "添加分类";
+            $page['title'] = "添加";
+            $type = M('Mubanfenlei')->select();
             $this->assign('page', $page);
+            $this->assign('types', $type);
             $this->display();
         }
     }
@@ -178,7 +180,7 @@ class TemplateController extends CommonController{
             $post = I('post.');
             //整理提交数据
             $map['id'] = $post['id'];
-            $map['url'] = $post['url'];
+            $map['url'] = $post['pic'];
             $map['img_x'] = $post['img_x'];
             $map['img_y'] = $post['img_y'];
             $map['img_width'] = $post['img_width'];
@@ -189,7 +191,7 @@ class TemplateController extends CommonController{
             $map['muban_background'] = $post['muban_background'];
             $map['hang_height'] = $post['hang_height'];
             $map['font_size'] = $post['font_size'];
-            $map['xiaotu_url'] = $post['xiaotu_url'];
+            $map['xiaotu_url'] = $post['img'];
             $map['type'] = $post['type'];
             $map['qcode'] = $post['qcode'];
             $map['qcode_x'] = $post['qcode_x'];

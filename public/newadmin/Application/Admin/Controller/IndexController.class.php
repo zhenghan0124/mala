@@ -15,6 +15,115 @@ use Think\Controller;
  */
 class IndexController extends CommonController{
 
+     /**
+   * 广告服务列表
+   */
+  public function ads() {
+    //显示标题
+    // $page['title'] = "广告服务";
+    // $this -> assign('page', $page);
+    //   $aid = session('aid');
+    //   $this -> assign('aid', $aid);
+    //   // var_dump($aid);exit;
+
+    // $count = M('Ads') -> count();
+    // $Pages = new \Think\Page($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+    // $show = $Pages->show();// 分页显示输出
+    // $data = M('Ads') -> order('rank desc,time desc,id desc') -> limit($Page -> firstRow.','.$Page -> listRows) -> select();
+
+    // $this->assign('data',$data);
+    // $this -> assign('pagenavi', $show);
+
+    $this -> display();
+  }
+
+
+  /**
+   * 新增广告服务
+   */
+  public function add_ads() {
+    if(IS_POST){
+      $post = I('post.');
+
+      //整理提交数据
+      $map['title'] = $post['title'];
+      $map['title_en'] = $post['title_en'];
+      $map['attachment'] = $post['attachment'];
+      $map['time'] = strtotime($post['time']);
+      $map['rank'] = $post['rank'];
+      var_dump($map);exit;
+      $count = M('Ads') -> add($map);
+
+      if($count > 0){
+        $this -> success("添加成功", U('ads'));
+      }else{
+        $this -> error("添加失败");
+      }
+    }else{
+      //显示标题
+      $page['title'] = "新增广告服务";
+      $this -> assign('page', $page);
+      $aid = session('aid');
+      $this -> assign('aid', $aid);
+      // var_dump($aid);exit;
+
+      $this -> display();
+    }
+  }
+
+
+  /**
+   * 编辑广告服务
+   */
+  public function edit_ads() {
+    if(IS_POST){
+      $post = I('post.');
+
+      //整理提交数据
+      $map['id'] = $post['id'];
+
+      $map['title'] = $post['title'];
+      $map['title_en'] = $post['title_en'];
+      $map['attachment'] = $post['attachment'];
+      $map['time'] = strtotime($post['time']);
+      $map['rank'] = $post['rank'];
+
+      $count = M('Ads') -> save($map);
+
+      if($count > 0){
+        $this -> success("编辑成功", u('ads'));
+      }else{
+        $this -> error("编辑失败");
+      }
+    }else{
+      //显示标题
+      $page['title'] = "编辑广告服务";
+      $this -> assign('page', $page);
+      $aid = session('aid');
+      $this -> assign('aid', $aid);
+      // var_dump($aid);exit;
+
+      $id = I('get.id');
+      $data = M('Ads') -> find($id);
+      $this -> assign('data', $data);
+
+      $this -> display();
+    }
+  }
+
+
+  /**
+   * 删除广告服务
+   */
+  public function del_ads() {
+    $id = I('get.id');
+    $count = M('Ads') -> delete($id);
+    if($count > 0){
+      $this -> success("删除成功");
+    }else{
+      $this -> error("删除失败");
+    }
+  }
     /**
      * 后台用户管理
      */

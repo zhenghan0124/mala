@@ -103,6 +103,25 @@
               </div>
             </div>
             <div class="form-group">
+              <label>视频地址</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="videourl" class="form-control" value="{$data.videourl}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>图文/视频</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <select name="type" class="form-control">
+                    <eq name="data.type" value="1"><option value="1">图文</option><option value="2">视频</option></eq>
+                    <eq name="data.type" value="2"><option value="2">视频</option><option value="1">图文</option></eq>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
               <label>是否推荐</label>
               <div class="row">
                 <div class="col-md-6">

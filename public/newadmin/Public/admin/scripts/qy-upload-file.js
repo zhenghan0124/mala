@@ -19,10 +19,10 @@ $.fn.extend({
 
             //判断是否上传多张图片
             if(multiple == 0){
-              thisObj.parent().before('<li><img src="/Public/admin/assets/images/document-icon.png" /><input type="hidden" name="'+name+'" value="'+data.path+data.pic+'" /><span class="qy-upload-del"><i class="fa fa-remove"></i></span><div class="attachment-title">'+data.name+'</div></li>');
+              thisObj.parent().before('<li><img src="/newadmin/Public/admin/assets/images/document-icon.png" /><input type="hidden" name="'+name+'" value="'+data.path+data.pic+'" /><span class="qy-upload-del"><i class="fa fa-remove"></i></span><div class="attachment-title">'+data.name+'</div></li>');
               thisObj.parent().hide();
             }else{
-              thisObj.parent().before('<li><img src="/Public/home/images/document-icon.png" /><input type="hidden" name="'+name+'[]" value="'+data.path+data.pic+'" /><span class="qy-upload-del"><i class="fa fa-remove"></i></span><div class="attachment-title">'+data.name+'</div></li>');
+              thisObj.parent().before('<li><img src="/newadmin/Public/home/images/document-icon.png" /><input type="hidden" name="'+name+'[]" value="'+data.path+data.pic+'" /><span class="qy-upload-del"><i class="fa fa-remove"></i></span><div class="attachment-title">'+data.name+'</div></li>');
             }
           }else{
             thisObj.unwrap();
@@ -42,7 +42,7 @@ $.fn.extend({
         filename = $(this).parent().find("input[name='"+name+"[]']").val();
         this_file = $(this).parent();
         this_wrap = $(this).parent().parent();
-        $.post("/admin/upload/del/",{filename:filename,},function(data,status){
+        $.post("/newadmin/index.php?m=Admin&c=Upload&a=del",{filename:filename,},function(data,status){
           if(status == "success"){
             if(data == "1"){
               this_file.remove();
@@ -65,7 +65,7 @@ $.fn.extend({
         filename = $(this).parent().find("input[name='"+name+"']").val();
         this_file = $(this).parent();
         this_wrap = $(this).parent().parent();
-        $.post("/admin/upload/del/",{filename:filename,},function(data,status){
+        $.post("/newadmin/index.php?m=Admin&c=Upload&a=del",{filename:filename,},function(data,status){
           if(status == "success"){
             if(data == "1"){
               this_file.remove();

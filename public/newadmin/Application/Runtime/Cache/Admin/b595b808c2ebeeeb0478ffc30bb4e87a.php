@@ -70,6 +70,11 @@
         <span class="nav-text">文章管理</span>
       </a>
       <ul class="nav-sub">
+          <li>
+              <a href="<?php echo U('Index/ads');?>">
+                <span class="nav-text">视频</span>
+              </a>
+            </li>
         <li>
           <a href="<?php echo U('Index/index');?>">
             <span class="nav-text">后台用户管理</span>

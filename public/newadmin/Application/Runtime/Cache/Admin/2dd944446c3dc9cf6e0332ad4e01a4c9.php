@@ -70,6 +70,11 @@
         <span class="nav-text">文章管理</span>
       </a>
       <ul class="nav-sub">
+          <li>
+              <a href="<?php echo U('Index/ads');?>">
+                <span class="nav-text">视频</span>
+              </a>
+            </li>
         <li>
           <a href="<?php echo U('Index/index');?>">
             <span class="nav-text">后台用户管理</span>
@@ -196,6 +201,32 @@
           </a>
         </li>
       </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Newcontent"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">新版发布美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Newcontent/index');?>">
+            <span class="nav-text">美图分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Newcontent/content');?>">
+            <span class="nav-text">小句发布列表</span>
+          </a>
+        </li>
+      </ul>
+
     </ul>
 
 </nav>
@@ -313,7 +344,7 @@
           <tbody>
           <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr>
               <td><?php echo ($data["id"]); ?></td>
-              <td><img src="<?php echo ($data["url"]); ?>" width="80"></td>
+              <td><img src="/newadmin/Uploads/<?php echo ($data["url"]); ?>" width="80"></td>
               <td><?php echo ($data["img_x"]); ?></td>
               <td><?php echo ($data["img_y"]); ?></td>
               <td><?php echo ($data["img_width"]); ?></td>

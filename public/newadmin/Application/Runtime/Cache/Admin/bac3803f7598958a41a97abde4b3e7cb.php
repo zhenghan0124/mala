@@ -73,6 +73,11 @@
         <span class="nav-text">文章管理</span>
       </a>
       <ul class="nav-sub">
+          <li>
+              <a href="<?php echo U('Index/ads');?>">
+                <span class="nav-text">视频</span>
+              </a>
+            </li>
         <li>
           <a href="<?php echo U('Index/index');?>">
             <span class="nav-text">后台用户管理</span>
@@ -199,6 +204,32 @@
           </a>
         </li>
       </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Newcontent"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">新版发布美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Newcontent/index');?>">
+            <span class="nav-text">美图分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Newcontent/content');?>">
+            <span class="nav-text">小句发布列表</span>
+          </a>
+        </li>
+      </ul>
+
     </ul>
 
 </nav>
@@ -281,10 +312,32 @@
         <div class="box-body">
           <form role="form" class="validate" action="" method="POST">
             <div class="form-group">
-              <label>模板url</label>
+              <label>模板图片</label>
               <div class="row">
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="url" value="">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-1">
+                    <ul>
+                      <li class="upload-pic-wrap">
+                        <i class="fa fa-plus"></i>
+                        <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>模板镂空图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-2">
+                    <ul>
+                      <li class="upload-pic-wrap">
+                        <i class="fa fa-plus"></i>
+                        <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -368,22 +421,32 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label>底部小图url</label>
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" class="form-control" name="xiaotu_url" value="">
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
+              <label>分类</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <select name="type" class="form-control">
+                    <?php if(is_array($types)): $i = 0; $__LIST__ = $types;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?><option value="<?php echo ($type["id"]); ?>"><?php echo ($type["txt"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
               <label>分类id</label>
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" class="form-control" name="type" value="">
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <label>二维码地址</label>
               <div class="row">

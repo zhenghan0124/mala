@@ -1,0 +1,185 @@
+[ 2019-08-22T10:28:28+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `userinfo` WHERE ( type=3 ) ORDER BY rand() LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `content` WHERE ( typeid=10 ) ORDER BY rand() LIMIT 5   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `support` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `support` WHERE `uid` = '1562558941' AND `buid` = '5cd556983cc50' AND `contentid` = 492 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `support` (`bopenid`,`buid`,`uid`,`openid`,`time`,`dtime`,`contentid`) VALUES ('otV6H5HjXzjtIa9bCOuF9FJe8iI8','5cd556983cc50','1562558941','1562558941','1566440908','2019-08-22 10:28:28','492') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '5cd556983cc50' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `userinfo` SET `tix`='1' WHERE `id` = 950 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `support` WHERE `uid` = '1562558941' AND `buid` = '5cd02244bb62f' AND `contentid` = 465 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `support` WHERE `uid` = '1562558941' AND `buid` = '5cdacd3072056' AND `contentid` = 505 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `support` (`bopenid`,`buid`,`uid`,`openid`,`time`,`dtime`,`contentid`) VALUES ('otV6H5OrHERPrYinpeuelBwvq0T4','5cdacd3072056','1562558941','1562558941','1566440908','2019-08-22 10:28:28','505') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '5cdacd3072056' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `userinfo` SET `tix`='1' WHERE `id` = 1060 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `support` WHERE `uid` = '1562558941' AND `buid` = '5cd02244bb62f' AND `contentid` = 464 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `support` (`bopenid`,`buid`,`uid`,`openid`,`time`,`dtime`,`contentid`) VALUES ('otV6H5A4WYGj_wUjENju8gtJa7TA','5cd02244bb62f','1562558941','1562558941','1566440908','2019-08-22 10:28:28','464') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `userinfo` WHERE `uid` = '5cd02244bb62f' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `userinfo` SET `tix`='1' WHERE `id` = 947 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `support` WHERE `uid` = '1562558941' AND `buid` = '5ce6552da7f64' AND `contentid` = 526 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-08-22T10:32:13+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 365 行.
+NOTIC: [8] Undefined index: ordersn E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 366 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined variable: notify_url E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 105 行.
+
+[ 2019-08-22T10:34:06+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined variable: notify_url E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 374 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 105 行.
+
+[ 2019-08-22T10:34:59+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+
+[ 2019-08-22T10:35:09+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+
+[ 2019-08-22T10:35:50+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+
+[ 2019-08-22T10:36:07+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 106 行.
+
+[ 2019-08-22T10:36:53+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 105 行.
+
+[ 2019-08-22T10:37:32+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+
+[ 2019-08-22T10:38:07+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 105 行.
+
+[ 2019-08-22T10:40:37+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 105 行.
+
+[ 2019-08-22T10:40:50+08:00 ] 127.0.0.1 /newadmin/index.php/Home/Index/wxpay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 363 行.
+NOTIC: [8] Undefined variable: count E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: title E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: grouptitle E:\mala\public\newadmin\Application\Home\Controller\IndexController.class.php 第 375 行.
+NOTIC: [8] Undefined index: result_code E:\mala\public\newadmin\ThinkPHP\Library\Org\Util\Wxpay.class.php 第 106 行.
+

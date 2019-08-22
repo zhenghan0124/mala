@@ -59,30 +59,35 @@ class MeituController extends Controller
             $uid = '1557122526';
             $id = $_GET['id'];
             $contentimg = 'http://127.0.0.1/upload/3.jpg';
-            $userinfo = DB::table('userinfo')
-                ->where('uid', '=', $uid)
-                ->first();
-//            var_dump($userinfo);
-            if ($userinfo->photo) {
-                $userimg = $userinfo->photo;
-            } else {
-                $userimg = $userinfo->avatarurl;
-            }
-            $userimg = 'http://127.0.0.1' . $userimg;
+//             $userinfo = DB::table('userinfo')
+//                 ->where('uid', '=', $uid)
+//                 ->first();
+// //            var_dump($userinfo);
+//             if ($userinfo->photo) {
+//                 $userimg = $userinfo->photo;
+//             } else {
+//                 $userimg = $userinfo->avatarurl;
+//             }
+//             $userimg = 'http://127.0.0.1' . $userimg;
             $muban = DB::table('muban')
             ->where('id', '=', $id)
             ->first();
-            $posturl = $muban->url;
-//            var_dump($userimg);exit;
-            $photo = $this->getPhoto($userimg);
-            $photo = ltrim($photo, ".");
-            $photo = 'http://127.0.0.1/' . $photo;
-//            imagecreatefromjpeg($photo);
-            if ($userinfo->name) {
-                $name = $userinfo->name;
-            } else {
-                $name = $userinfo->nickname;
+            if($id == 37){
+                $posturl = 'http://127.0.0.1/newadmin/Uploads/'.$muban->url;
+            }else{
+                $posturl = $muban->url;
             }
+            
+//            var_dump($userimg);exit;
+//             $photo = $this->getPhoto($userimg);
+//             $photo = ltrim($photo, ".");
+//             $photo = 'http://127.0.0.1/' . $photo;
+// //            imagecreatefromjpeg($photo);
+//             if ($userinfo->name) {
+//                 $name = $userinfo->name;
+//             } else {
+//                 $name = $userinfo->nickname;
+//             }
 
 
             //获取发布图贴图片的url
@@ -100,59 +105,59 @@ class MeituController extends Controller
             $x_bg = $array_bg[0];//图片宽
             $y_bg = $array_bg[1];//图片高
 
-//            $text = $_GET['text'];
-            $text = "  河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天会消失，我就这一颗心，你看着伤吧！河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天，太阳总会下山，我的爱也有一天";
-            $text = trim($text); //清除字符串两边的空格
-            $text = preg_replace("/\t/", "", $text); //使用正则表达式替换内容，如：空格，换行，并将替换为空。
-            $text = preg_replace("/\r\n/", "", $text);
-            $text = preg_replace("/\r/", "", $text);
-            $text = preg_replace("/\n/", "", $text);
-            $text = preg_replace("/ /", "", $text);
-            $text = preg_replace("/  /", "", $text);  //匹配html中的空格
-//        $text = "  河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天会消失，我就这一颗心，你看着伤吧！河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天，太阳总会下山，我的爱也有一天";
+// //            $text = $_GET['text'];
+//             $text = "  河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天会消失，我就这一颗心，你看着伤吧！河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天，太阳总会下山，我的爱也有一天";
+//             $text = trim($text); //清除字符串两边的空格
+//             $text = preg_replace("/\t/", "", $text); //使用正则表达式替换内容，如：空格，换行，并将替换为空。
+//             $text = preg_replace("/\r\n/", "", $text);
+//             $text = preg_replace("/\r/", "", $text);
+//             $text = preg_replace("/\n/", "", $text);
+//             $text = preg_replace("/ /", "", $text);
+//             $text = preg_replace("/  /", "", $text);  //匹配html中的空格
+// //        $text = "  河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天会消失，我就这一颗心，你看着伤吧！河流总会干涸，树叶总会落尽，太阳总会下山，我的爱也有一天，太阳总会下山，我的爱也有一天";
 
-            //文字换行设置行高
-            $pos = ['top' => $muban->text_y,
-                'fontsize' => $muban->font_size,
-                'width' => $muban->text_width,
-                'left' => $muban->text_x,
-                'hang_size' => $muban->hang_height,
-                'color' => [0 => 255, 1 => 255, 2 => 255]
-            ];
-            $iswrite = true;
-            $fontpath = public_path("./font/simhei.ttf");
-            $nowHeight = 0;
-            $second = ['left' => $muban->text_x, 'width' => $muban->text_width, 'maxline' => 3];
+//             //文字换行设置行高
+//             $pos = ['top' => $muban->text_y,
+//                 'fontsize' => $muban->font_size,
+//                 'width' => $muban->text_width,
+//                 'left' => $muban->text_x,
+//                 'hang_size' => $muban->hang_height,
+//                 'color' => [0 => 255, 1 => 255, 2 => 255]
+//             ];
+//             $iswrite = true;
+//             $fontpath = public_path("./font/simhei.ttf");
+//             $nowHeight = 0;
+//             $second = ['left' => $muban->text_x, 'width' => $muban->text_width, 'maxline' => 3];
 
-            $this->textalign($background, $pos, $text, $iswrite, $fontpath, $nowHeight, $second);
+//             $this->textalign($background, $pos, $text, $iswrite, $fontpath, $nowHeight, $second);
 
 
-            //小程序二维码
-             $qcode = $muban->qcode;
-//            $qcode = $this->qcode();
-//            $qcode = ltrim($qcode, ".");
-//            $qcode = 'http://duanju.58100.com' . $qcode;
-//            imagecreatefrompng($qcode);
-            $array1 = getimagesize($qcode);
-            $x1 = $array1[0];//图片宽
-            $y1 = $array1[1];//图片高
-            $radius1 = $array1[0] / 2;
-            //切圆角
-            $qcode_img = $this->radiusimg($qcode, $radius1);
+//             //小程序二维码
+//              $qcode = $muban->qcode;
+// //            $qcode = $this->qcode();
+// //            $qcode = ltrim($qcode, ".");
+// //            $qcode = 'https://duanju.58100.com' . $qcode;
+// //            imagecreatefrompng($qcode);
+//             $array1 = getimagesize($qcode);
+//             $x1 = $array1[0];//图片宽
+//             $y1 = $array1[1];//图片高
+//             $radius1 = $array1[0] / 2;
+//             //切圆角
+//             $qcode_img = $this->radiusimg($qcode, $radius1);
 
-//            绘制小程序二维码
-            imagecopyresampled($background, $qcode_img, $muban->qcode_x, $muban->qcode_y, 0, 0, $muban->qcode_width, $muban->qcode_height, $x1, $y1);
+// //            绘制小程序二维码
+//             imagecopyresampled($background, $qcode_img, $muban->qcode_x, $muban->qcode_y, 0, 0, $muban->qcode_width, $muban->qcode_height, $x1, $y1);
 
-            //用户头像
-            $array2 = getimagesize($photo);
-            $x2 = $array2[0];//图片宽
-            $y2 = $array2[1];//图片高
-            $radius2 = $array2[0] / 2;
-            //切圆角
-            $user_img = $this->radiusimg($photo, $radius2);
+//             //用户头像
+//             $array2 = getimagesize($photo);
+//             $x2 = $array2[0];//图片宽
+//             $y2 = $array2[1];//图片高
+//             $radius2 = $array2[0] / 2;
+//             //切圆角
+//             $user_img = $this->radiusimg($photo, $radius2);
 
-//            绘制用户头像
-            imagecopyresampled($background, $user_img, $muban->userimg_x, $muban->userimg_y, 0, 0, $muban->userimg_width, $muban->userimg_height, $x2, $y2);
+// //            绘制用户头像
+//             imagecopyresampled($background, $user_img, $muban->userimg_x, $muban->userimg_y, 0, 0, $muban->userimg_width, $muban->userimg_height, $x2, $y2);
 
 
             //用户文章图片
@@ -166,24 +171,34 @@ class MeituController extends Controller
             $x_wz = $array[0];//图片宽
             $y_wz = $array[1];//图片高
 
-            //绘制姓名日期
-            $text1 = $name;
-            $date = date('Y/m/d');
-            $text2 = "于" . $date;
-            ImageTTFText($background, $muban->username_size, 0, $muban->username_x, $muban->username_y, $black, public_path("./font/simhei.ttf"), $text1);
-            ImageTTFText($background, $muban->date_size, 0, $muban->date_x, $muban->date_y, $black, public_path("./font/simhei.ttf"), $text2);
+            // //绘制姓名日期
+            // $text1 = $name;
+            // $date = date('Y/m/d');
+            // $text2 = "于" . $date;
+            // ImageTTFText($background, $muban->username_size, 0, $muban->username_x, $muban->username_y, $black, public_path("./font/simhei.ttf"), $text1);
+            // ImageTTFText($background, $muban->date_size, 0, $muban->date_x, $muban->date_y, $black, public_path("./font/simhei.ttf"), $text2);
 
-            //文章图片宽$x_wz，文章图片高$y_wz，绘制区域宽$muban->img_width，绘制区域高$muban->img_height;
-            if($x_wz > $y_wz){
-                $bili = $muban->img_height;
-            }else{
-                $bili = $muban->img_width;
-            }
+            // //文章图片宽$x_wz，文章图片高$y_wz，绘制区域宽$muban->img_width，绘制区域高$muban->img_height;
+            // if($x_wz > $y_wz){
+            //     $bili = $muban->img_height;
+            // }else{
+            //     $bili = $muban->img_width;
+            // }
 
             //绘制用户文章背景
             imagecopyresized ( $background_1 , $wenzhangimg , $muban->img_x , $muban->img_y , 0 , 0 , $muban->img_width , $muban->img_height , $x_wz , $y_wz );
 //            imagecopyresampled($background_1, $wenzhangimg, $muban->img_x, $muban->img_y, 0, 0, $bili, $bili, $x_wz, $y_wz);
 //            imagecopyresampled($background_1, $wenzhangimg, 0, 60, 0, 0, $a, $b, $x_wz, $y_wz);
+
+            //底部图片
+            $dibuurl = 'http://127.0.0.1/upload/dibu.png';
+            $dibu = imagecreatefrompng($dibuurl);
+            $array = getimagesize($dibuurl);
+            $x_db = $array[0];//图片宽
+            $y_db = $array[1];//图片高
+
+            //绘制底部二维码
+            imagecopyresampled($background, $dibu, 0, 1000, 0, 0, 750, 140, $x_db, $y_db);
 
             //将绘制好的海报绘制在背景上
             imagecopyresampled($background_1, $background, 0, 0, 0, 0, $x_bg, $y_bg, $x_bg, $y_bg);

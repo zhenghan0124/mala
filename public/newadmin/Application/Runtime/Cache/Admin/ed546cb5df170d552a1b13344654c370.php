@@ -73,6 +73,11 @@
         <span class="nav-text">文章管理</span>
       </a>
       <ul class="nav-sub">
+          <li>
+              <a href="<?php echo U('Index/ads');?>">
+                <span class="nav-text">视频</span>
+              </a>
+            </li>
         <li>
           <a href="<?php echo U('Index/index');?>">
             <span class="nav-text">后台用户管理</span>
@@ -199,6 +204,32 @@
           </a>
         </li>
       </ul>
+
+      <li <?php if((CONTROLLER_NAME) == "Newcontent"): ?>class="active"<?php endif; ?>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'/newadmin/Public/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">新版发布美图</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="<?php echo U('Newcontent/index');?>">
+            <span class="nav-text">美图分类列表</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo U('Newcontent/content');?>">
+            <span class="nav-text">小句发布列表</span>
+          </a>
+        </li>
+      </ul>
+
     </ul>
 
 </nav>
@@ -281,10 +312,42 @@
         <div class="box-body">
           <form role="form" class="validate" action="" method="POST">
             <div class="form-group">
-              <label>模板url</label>
+              <label>模板图片</label>
               <div class="row">
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="url" value="<?php echo ($data["url"]); ?>">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-1">
+                    <ul>
+                      <?php if(!empty($data["xiaotu_url"])): ?><li>
+                          <img src="/newadmin/Uploads/<?php echo ($data["xiaotu_url"]); ?>">
+                          <input type="hidden" name="img" value="<?php echo ($data["xiaotu_url"]); ?>">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li><?php endif; ?>
+                      <li class="upload-pic-wrap" <?php if(!empty($data["xiaotu_url"])): ?>style="display:none;"<?php endif; ?>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>模板镂空图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-2">
+                    <ul>
+                      <?php if(!empty($data["url"])): ?><li>
+                          <img src="/newadmin/Uploads/<?php echo ($data["url"]); ?>">
+                          <input type="hidden" name="pic" value="<?php echo ($data["url"]); ?>">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li><?php endif; ?>
+                      <li class="upload-pic-wrap" <?php if(!empty($data["url"])): ?>style="display:none;"<?php endif; ?>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -368,14 +431,14 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label>底部小图url</label>
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" class="form-control" name="xiaotu_url" value="<?php echo ($data["xiaotu_url"]); ?>">
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <label>分类id</label>
               <div class="row">
@@ -643,8 +706,8 @@
   <script src="/newadmin/Public/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
   <script src="/newadmin/Public/admin/scripts/qy-upload.js"></script>
   <script type="text/javascript">
-    $('.qy-upload-1').qy_upload("/newadmin/index.php/Admin/upload/?width=450&height=300","img",0);
-    $('.qy-upload-2').qy_upload("/newadmin/index.php/Admin/upload/?width=450&height=300","pic",0);
+    $('.qy-upload-1').qy_upload("<?php echo U('Upload/index',['width'=>450,'height'=>300]);?>","img",0);
+    $('.qy-upload-2').qy_upload("<?php echo U('Upload/index',['width'=>450,'height'=>300]);?>","pic",0);
   </script>
 
   <script type="text/javascript" src="/newadmin/Public/admin/libs/jquery/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>

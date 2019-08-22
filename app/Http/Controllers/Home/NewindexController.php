@@ -67,6 +67,7 @@ class NewindexController extends Controller
 //                ->where('recommended','=',2)
                 ->where('status','=',1)
                 ->where('audit','=',2)
+                ->inRandomOrder()
                 ->orderBy('newcontent.tjtime','desc')
                 ->orderBy('newcontent.date','desc')
                 ->offset($offset)
@@ -88,6 +89,8 @@ class NewindexController extends Controller
 //                ->where('recommended','=',2)
                 ->where('status','=',1)
                 ->where('audit','=',2)
+                ->inRandomOrder()
+                ->orderBy('download','desc')
                 ->orderBy('newcontent.tjtime','desc')
                 ->orderBy('newcontent.date','desc')
                 ->offset($offset)
@@ -128,6 +131,181 @@ class NewindexController extends Controller
                     $arr = [
                         'status' => 1,
                         'contents' => $contents,
+                        'collection' => [],
+                        'type' => $type
+                    ];
+                }
+        } else {
+                $arr = [
+                    'status' => 1,
+                    'contents' => [],
+                    'collection' => [],
+                    'type' => []
+                ];
+        }
+        exit(json_encode($arr, JSON_UNESCAPED_UNICODE));
+    }
+
+    //首页获取
+    public function donewindexs()
+    {
+        //获取内容
+        $page = isset($_POST['page']) ? $_POST['page'] : 1;
+        $limit = isset($_POST['len']) ? $_POST['len'] : 10;
+        $limit1 = $limit/2;
+        $limit2 = $limit/2;
+        // $offset = ($page - 1) * $limit;
+        $offset1 = ($page - 1) * $limit1;
+        $offset2 = ($page - 1) * $limit2;
+        // $_POST['uid'] = '1557122526';
+        // $_POST['typeid'] = '';
+        if ($_POST['typeid'] != '') {
+            $type=DB::table('newtype')
+                ->where('status','=','1')
+                ->inRandomOrder()
+                ->first();
+            $type->pic = 'https://duanju.58100.com/newadmin/Uploads/'.$type->pic;
+//            $contents = $content->getContent($offset, $limit, $_POST['typeid']);
+            //前面5条后台发布
+            $contents_admin = DB::table('newcontent')
+                //过滤掉已经禁用的类型文章
+//                ->join('newtype', function ($join) {
+//                    $join->on('newcontent.typeid', '=', 'type.id')
+//                        ->where('newtype.status', '=', 1);
+//                })
+                ->where('typeid','=',$_POST['typeid'])
+//                ->where('recommended','=',2)
+                ->where('fabutype','=',2)
+                ->where('status','=',1)
+                ->where('audit','=',2)
+                ->inRandomOrder()
+                ->orderBy('newcontent.tjtime','desc')
+                ->orderBy('newcontent.date','desc')
+                ->offset($offset1)
+                ->limit($limit1)
+                ->get();
+            //后面5条用户发布
+            $contents_user = DB::table('newcontent')
+                //过滤掉已经禁用的类型文章
+//                ->join('newtype', function ($join) {
+//                    $join->on('newcontent.typeid', '=', 'type.id')
+//                        ->where('newtype.status', '=', 1);
+//                })
+                ->where('typeid','=',$_POST['typeid'])
+//                ->where('recommended','=',2)
+                ->where('fabutype','=',1)
+                ->where('status','=',1)
+                ->where('audit','=',2)
+                // ->inRandomOrder()
+                // ->orderBy('newcontent.tjtime','desc')
+                ->orderBy('newcontent.date','desc')
+                ->offset($offset2)
+                ->limit($limit2)
+                ->get();
+        } else {
+            $type=DB::table('newtype')
+                ->where('status','=','1')
+                ->inRandomOrder()
+                ->first();
+            $type->pic = 'https://duanju.58100.com/newadmin/Uploads/'.$type->pic;
+//            $contents = $content->getContents($offset, $limit);
+            //前面5条后台发布
+            $contents_admin = DB::table('newcontent')
+                //过滤掉已经禁用的类型文章
+//                ->join('newtype', function ($join) {
+//                    $join->on('newcontent.typeid', '=', 'type.id')
+//                        ->where('newtype.status', '=', 1);
+//                })
+//                ->where('recommended','=',2)
+                ->where('status','=',1)
+                ->where('audit','=',2)
+                ->where('fabutype','=',2)
+                ->inRandomOrder()
+                ->orderBy('download','desc')
+                ->orderBy('newcontent.tjtime','desc')
+                ->orderBy('newcontent.date','desc')
+                ->offset($offset1)
+                ->limit($limit1)
+                ->get();
+            //后面5条用户发布
+            $contents_user = DB::table('newcontent')
+                //过滤掉已经禁用的类型文章
+//                ->join('newtype', function ($join) {
+//                    $join->on('newcontent.typeid', '=', 'type.id')
+//                        ->where('newtype.status', '=', 1);
+//                })
+//                ->where('recommended','=',2)
+                ->where('fabutype','=',1)
+                ->where('status','=',1)
+                ->where('audit','=',2)
+                // ->inRandomOrder()
+                // ->orderBy('download','desc')
+                // ->orderBy('newcontent.tjtime','desc')
+                ->orderBy('newcontent.date','desc')
+                ->offset($offset2)
+                ->limit($limit2)
+                ->get();
+        }
+        //将获取到的后台发布数据解析为数组
+        $admin_content =[]; 
+        foreach ($contents_admin as $k=>$v) { 
+        $m = []; 
+        foreach ($v as $i=>$j) { 
+        $m[$i] = $j; 
+        } 
+        $admin_content[$k] = $m; 
+        } 
+        
+        //将获取到的用户发布数据解析为数组
+        $user_content =[]; 
+        foreach ($contents_user as $k=>$v) { 
+        $m = []; 
+        foreach ($v as $i=>$j) { 
+        $m[$i] = $j; 
+        } 
+        $user_content[$k] = $m; 
+        } 
+        $contents = array_merge($admin_content,$user_content);
+        // var_dump($contents);exit;
+        // var_dump($admin_content);
+        // var_dump($user_content);exit;
+        // var_dump($contentss);exit;
+        // if (!$contents->isEmpty()) {
+        if (!empty($contents)) {
+                $content = array();
+                foreach($contents as $value){
+                    //判断是否存在域名
+                    if(strpos($value['photo'], 'https') !== false){
+                        $value['photo'] = $value['photo'];
+                    }else{
+                        $value['photo'] = 'https://duanju.58100.com'.$value['photo'];
+                    }
+//                    $value->photo = 'https://duanju.58100.com/'.$value->photo;
+                    $value['imgurl'] = 'https://duanju.58100.com/newadmin/Uploads/'.$value['imgurl'];
+                    $content[] = $value;
+                }
+                foreach ($content as $v) {
+                    $contentid[] = $v['id'];
+                }
+                if($contentid){
+                    $collection = DB::table('newcollection')
+                        ->where('uid', '=', $_POST['uid'])
+                        ->whereIn('contentid', $contentid)
+                        ->get();
+                }else{
+                    $collection = [];
+                }
+                if ($collection) {
+                    $arr = [
+                        'status' => 1,
+                        'contents' => $content,
+                        'collection' => $collection,
+                        'type' => $type
+                    ];
+                }else {
+                    $arr = [
+                        'status' => 1,
+                        'contents' => $content,
                         'collection' => [],
                         'type' => $type
                     ];
@@ -270,9 +448,22 @@ class NewindexController extends Controller
     public function download()
     {
         if (isset($_POST['contentid'])) {
-            $download = DB::table('newcontent')
+            $content = DB::table('newcontent')
+                ->where('id', '=', $_POST['contentid'])
+                ->first();
+            if($content->uid == '1557122526'){
+                $download = DB::table('newcontent')
+                ->where('id', '=', $_POST['contentid'])
+                ->increment('xiazai');
+                $download = DB::table('newcontent')
                 ->where('id', '=', $_POST['contentid'])
                 ->increment('download');
+            }else{
+                $download = DB::table('newcontent')
+                ->where('id', '=', $_POST['contentid'])
+                ->increment('download');
+            }
+            
             if ($download) {
                 $arr = [
                     'status' => 1,
@@ -317,6 +508,82 @@ class NewindexController extends Controller
                 'info' => '缺少参数',
             ];
         }
+        exit(json_encode($arr, JSON_UNESCAPED_UNICODE));
+    }
+
+    //首页日签推荐
+    public function daily()
+    {
+        //当前日期
+        $date = date('Y年m月d日');
+        //今天是几月
+        $month = date('m');
+        if($month == '01'){
+            $month = 1;
+        }elseif ($month == '02'){
+            $month = 2;
+        }elseif ($month == '03'){
+            $month = 3;
+        }elseif ($month == '04'){
+            $month = 4;
+        }elseif ($month == '05'){
+            $month = 5;
+        }elseif ($month == '06'){
+            $month = 6;
+        }elseif ($month == '07'){
+            $month = 7;
+        }elseif ($month == '08'){
+            $month = 8;
+        }elseif ($month == '09'){
+            $month = 9;
+        }elseif ($month == '10'){
+            $month = 10;
+        }elseif ($month == '11'){
+            $month = 11;
+        }elseif ($month == '12'){
+            $month = 12;
+        }
+        //获取月份图片
+        $monthimg = DB::table('yuefen')
+            ->where('month','=',$month)
+            ->first();
+        $monthimg->pic = 'https://duanju.58100.com/newadmin/Uploads/'.$monthimg->pic;
+        //今天是周几
+        $weekarray = array("周日","周一","周二","周三","周四","周五","周六");
+        $week = $weekarray[date("w")];
+        if($week == '周一'){
+            $week = 1;
+        }elseif ($week == '周二'){
+            $week = 2;
+        }elseif ($week == '周三'){
+            $week = 3;
+        }elseif ($week == '周四'){
+            $week = 4;
+        }elseif ($week == '周五'){
+            $week = 5;
+        }elseif ($week == '周六'){
+            $week = 6;
+        }elseif ($week == '周日'){
+            $week = 7;
+        }
+        //获取周图片
+        $weekimg = DB::table('riqian')
+            ->where('week','=',$week)
+            ->first();
+        $weekimg->pic = 'https://duanju.58100.com/newadmin/Uploads/'.$weekimg->pic;
+            if ($weekimg) {
+                $arr = [
+                    'status' => 1,
+                    'weekimg' => $weekimg,
+                    'monthimg' => $monthimg,
+                    'date' => $date
+                ];
+            } else {
+                $arr = [
+                    'status' => 1,
+                    'info' => '查询失败',
+                ];
+            }
         exit(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
 
@@ -1118,5 +1385,43 @@ class NewindexController extends Controller
 //            var_dump($uidredis);
 //        }
 
+    }
+
+    public function newinfo(){
+        if (isset($_POST['encryptedData']) && isset($_POST['iv']) && isset($_POST['seesion_key']) && isset($_POST['uid'])) {
+            $user = new PublicController();
+            $userinfo = $user->decryptData($_POST['encryptedData'], $_POST['iv'], $_POST['seesion_key']);
+            var_dump($userinfo);exit;
+            if ($userinfo) {
+                // $user = new Userinfo();
+                // $users = $user->userInfo($userinfo, $_POST['uid']);
+                $re=$this
+                ->where('openid', $userinfo['openId'])
+                ->where('uid','=',$_POST['uid'])
+                ->exists();
+                if ($users) {
+                    $data = array(
+                        'status' => 1,
+                        'info' => '获取成功'
+                    );
+                } else {
+                    $data = array(
+                        'status' => 0,
+                        'info' => '请从新获取'
+                    );
+                }
+            } else {
+                $data = array(
+                    'status' => 0,
+                    'info' => '获取失败'
+                );
+            }
+        } else {
+            $data = array(
+                'status' => 0,
+                'info' => '参数错误'
+            );
+        }
+        exit(json_encode($data, JSON_UNESCAPED_UNICODE));
     }
 }

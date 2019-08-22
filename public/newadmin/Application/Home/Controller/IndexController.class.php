@@ -357,4 +357,22 @@ class IndexController extends GlobalController {
         return $img;
 
     }
+
+    public function wxpay(){
+        //微信支付
+        $total_fee = $data['sum_price'];//测试
+        $total_fee = 0.01;//测试
+        $data['orderid'] = '1';
+        $ordersn = '112233';
+        $config = array(
+          'appid' => 'wx0b214ca08babc1a3',
+          'mch_id' => '1542149431',
+          'pay_apikey' => '5eqZBU4Jr88u1IHMCqXCPC9ZlqtUxhmc',
+        );
+        $notify_url = 'https://duanju.58100.com/home/index/yibu';
+        $wxpay = new \Org\Util\Wxpay($config);   //初始化类(同时传递参数)
+
+        $wxdata = $wxpay->wxpay($count, $total_fee, "杭州国际博览中心北辰大酒店" . "-{$data['title']}-{$data['grouptitle']}", $ordersn, $notify_url); //微信支付
+        dump($wxdata);die();
+    }
 }

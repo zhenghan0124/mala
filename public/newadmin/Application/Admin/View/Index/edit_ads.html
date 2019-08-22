@@ -1,0 +1,99 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="header_common">
+  <!-- datepicker -->
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/css/datepicker.css">
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="" method="post">
+            <div class="form-group">
+              <label>标题</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title" class="form-control" value="{$data.title}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>标题（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_en" class="form-control" value="{$data.title_en}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>附件</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic">
+                    <ul>
+                      <notempty name="data.attachment">
+                        <li>
+                          <img src="__PUBLIC__/admin/assets/images/document-icon.png">
+                          <input type="hidden" name="attachment" value="{$data.attachment}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.attachment"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>日期</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="time" class="form-control form-control-datepicker" value="{$data.time|date='Y-m-d',###}" readonly>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>排序</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="rank" class="form-control" value="{$data.rank}">
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="id"value="{$data.id}">
+            <button type="submit" class="btn primary m-b">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="footer_common">
+  <!-- qy-upload -->
+  <script src="__PUBLIC__/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
+  <script src="__PUBLIC__/admin/scripts/qy-upload-file.js"></script>
+  <script type="text/javascript">
+    $('.qy-upload').qy_upload_file("{:U('Upload/attachment')}","attachment",0);
+  </script>
+
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+  <script>
+    $('.form-control-datepicker').datepicker({
+      language: "zh-CN",
+      format: "yyyy-mm-dd",
+      autoclose: true
+    });
+  </script>
+</block>

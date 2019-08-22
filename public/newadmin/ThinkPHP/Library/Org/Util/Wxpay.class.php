@@ -65,7 +65,7 @@ class Wxpay
      * @param string $total_fee 金额
      * @return  json的数据
      */
-    public function wxpay($goods_id, $total_fee, $body, $order_sn)
+    public function wxpay($goods_id, $total_fee, $body, $order_sn ,$notify_url)
     {
         $config = $this->config;
 
@@ -74,14 +74,18 @@ class Wxpay
             'appid' => $config['appid'],
             'mch_id' => $config['mch_id'],
             'device_info' => 'WEB',
+            'openid	' => 'otV6H5A0YDS8XYdI6hQHKm5P6hEw',
             'nonce_str' => self::getNonceStr(),
             'body' => $body,
             'out_trade_no' => $order_sn,
             'total_fee' => $total_fee * 100,
             'spbill_create_ip' => self::getip(),
-            'notify_url' => 'http://' . $_SERVER['HTTP_HOST'] . '/notify.php',
-            'trade_type' => 'NATIVE',
-            'product_id' => $goods_id
+            // 'notify_url' => 'http://' . $_SERVER['HTTP_HOST'] . '/notify.php',
+            'notify_url' => $notify_url,
+            'trade_type' => 'JSAPI',
+            'product_id' => $goods_id,
+             'time_start' => date('YmdHis'),
+            'time_expire' => date('YmdHis', time()+90),//订单有效期90秒
         );
         $unifiedorder['sign'] = self::makeSign($unifiedorder);
 

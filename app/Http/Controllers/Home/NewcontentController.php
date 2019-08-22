@@ -402,9 +402,19 @@ class NewcontentController extends Controller
 
     //获取固定图片
     public function fixedpicture(){
-        $picture = DB::table('picture')
-            ->where('status', '=', 1)
-            ->get();
+        if ($_POST['typeid'] != '') {
+            $picture = DB::table('picture')
+                ->where('status', '=', 1)
+                ->where('typeid', '=', $_POST['typeid'])
+                ->orderBy('id','desc')
+                ->get();
+        } else {
+            $picture = DB::table('picture')
+                ->where('status', '=', 1)
+                ->orderBy('id','desc')
+                ->get();
+        }
+
         if($picture){
             $arr = [
                 'status' => 1,
@@ -421,9 +431,17 @@ class NewcontentController extends Controller
 
     //获取固定文字
     public function fixedtext(){
-        $text = DB::table('short')
-            ->where('status', '=', 1)
-            ->get();
+        if ($_POST['typeid'] != '') {
+            $text = DB::table('short')
+                ->where('status', '=', 1)
+                ->where('typeid', '=', $_POST['typeid'])
+                ->get();
+        } else {
+            $text = DB::table('short')
+                ->where('status', '=', 1)
+                ->get();
+        }
+
         if($text){
             $arr = [
                 'status' => 1,
@@ -533,6 +551,342 @@ class NewcontentController extends Controller
 //            'path' => $path,
 //        ];
         return $imgurl;
+    }
+
+    //生成海报
+    public function downloads()
+    {
+        if(isset($_POST['uid']) && isset($_POST['contentid'])) {
+//        Header("Content-type: image/png");
+            //创建画布
+//        $uid = '1557122526';
+            $contentid = $_POST['contentid'];
+            $userinfo = DB::table('userinfo')
+                ->where('uid', '=', $_POST['uid'])
+                ->first();
+            if ($userinfo->photo) {
+                $userimg = $userinfo->photo;
+            } else {
+                $userimg = $userinfo->avatarurl;
+            }
+            if ($userinfo->name) {
+                $name = $userinfo->name;
+            } else {
+                $name = $userinfo->nickname;
+            }
+
+            //判断是否存在域名
+            if (strpos($userimg, 'https') !== false) {
+                $userimg = $userimg;
+            } else {
+                $userimg = 'https://duanju.58100.com' . $userimg;
+            }
+
+            //获取发布图片
+            $content = DB::table('newcontent')
+                ->where('id', '=', $contentid)
+                ->first();
+
+            //用户头像
+            $array2 = @getimagesize($userimg);
+            $x2 = $array2[0];//图片宽
+            $y2 = $array2[1];//图片高
+            $radius2 = $array2[0] / 2;
+            //切圆角
+            $user_img = $this->radiusimg($userimg, $radius2);
+
+            //画布
+            $background = imagecreatetruecolor(1125, 1306);
+            //颜色
+            $black = ImageColorAllocate($background, 0, 0, 0);
+
+            if(isset($_POST['type'])){
+                if($_POST['type'] == 1){
+                    //白色背景
+                    $bg = imagecreatefrompng('https://duanju.58100.com/upload/bg1.png');
+                    //白色背景路径
+                    $bgimg = 'https://duanju.58100.com/upload/bg1.png';
+                }
+                if($_POST['type'] == 2){
+                    //白色背景
+                    $bg = imagecreatefrompng('https://duanju.58100.com/upload/bg2.png');
+                    //白色背景路径
+                    $bgimg = 'https://duanju.58100.com/upload/bg2.png';
+                }
+            }else{
+                //白色背景
+                $bg = imagecreatefrompng('https://duanju.58100.com/upload/bg1.png');
+                //白色背景路径
+                $bgimg = 'https://duanju.58100.com/upload/bg1.png';
+            }
+
+
+            $contentimgs = 'https://duanju.58100.com/newadmin/Uploads/'.$content->imgurl;
+//            $contentimgs = 'http://127.0.0.1/upload/11.png';
+            $ext = @getimagesize($contentimgs);
+            $exname = explode('/', $ext['mime']);
+            $exnames = $exname[1];
+            switch ($exnames) {
+                case 'jpg':
+                    $contentimg = imagecreatefromjpeg($contentimgs);
+                    break;
+                case 'jpeg':
+                    $contentimg = imagecreatefromjpeg($contentimgs);
+                    break;
+                case 'png':
+                    $contentimg = imagecreatefrompng($contentimgs);
+                    break;
+            }
+
+            //文章图片
+            $array = @getimagesize($contentimgs);
+            $x_wz = $array[0];//图片宽
+            $y_wz = $array[1];//图片高
+
+            //白色背景图片
+            $array = @getimagesize($bgimg);
+            $x_bg = $array[0];//图片宽
+            $y_bg = $array[1];//图片高
+
+            //绘制白色背景图片
+            imagecopyresampled($background, $bg, 0, 0, 0, 0, 1125, 1306, $x_bg, $y_bg);
+
+            //绘制用户文章背景
+            imagecopyresampled($background, $contentimg, 0, 0, 0, 0, 1125, 1125, $x_wz, $y_wz);
+
+            //绘制用户头像
+            imagecopyresampled($background, $user_img, 18, 1144, 0, 0, 156, 156, $x2, $y2);
+
+            //绘制姓名
+            $text1 = $name;
+            ImageTTFText($background, 48, 0, 200, 1200, $black, public_path("./font/simhei.ttf"), $text1);
+
+//          imagepng($background);
+            $path = './newadmin/Uploads/userdownload/' . time() . rand(1, 9) . rand(1, 9) . rand(1, 9) . '.jpg';
+            Imagepng($background, $path);
+            ImageDestroy($background);
+            $imgurl = ltrim($path, '.');
+//            $imgurl = str_replace('/newadmin/Uploads/', '', $imgurl);
+            $arr = [
+                'status' => 1,
+                'path' => $imgurl,
+            ];
+//            return $imgurl;
+        }else{
+            $arr = [
+                'status' => 0,
+                'info' => '参数错误',
+            ];
+        }
+        exit(json_encode($arr, JSON_UNESCAPED_UNICODE));
+    }
+
+        //日签下载
+        public function riqiandownload()
+        {
+            if(isset($_POST['uid']) && isset($_POST['contentid'])) {
+    //        Header("Content-type: image/png");
+                //创建画布
+    //        $uid = '1557122526';
+                $contentid = $_POST['contentid'];
+                $userinfo = DB::table('userinfo')
+                    ->where('uid', '=', $_POST['uid'])
+                    ->first();
+                if ($userinfo->photo) {
+                    $userimg = $userinfo->photo;
+                } else {
+                    $userimg = $userinfo->avatarurl;
+                }
+                if ($userinfo->name) {
+                    $name = $userinfo->name;
+                } else {
+                    $name = $userinfo->nickname;
+                }
+    
+                //判断是否存在域名
+                if (strpos($userimg, 'https') !== false) {
+                    $userimg = $userimg;
+                } else {
+                    $userimg = 'https://duanju.58100.com' . $userimg;
+                }
+    
+                //获取发布图片
+                $content = DB::table('riqian')
+                    ->where('id', '=', $contentid)
+                    ->first();
+    
+                //用户头像
+                $array2 = @getimagesize($userimg);
+                $x2 = $array2[0];//图片宽
+                $y2 = $array2[1];//图片高
+                $radius2 = $array2[0] / 2;
+                //切圆角
+                $user_img = $this->radiusimg($userimg, $radius2);
+    
+                //画布
+                $background = imagecreatetruecolor(1125, 1306);
+                //颜色
+                $black = ImageColorAllocate($background, 0, 0, 0);
+    
+                if(isset($_POST['type'])){
+                    if($_POST['type'] == 1){
+                        //白色背景
+                        $bg = imagecreatefrompng('https://duanju.58100.com/upload/bg1.png');
+                        //白色背景路径
+                        $bgimg = 'https://duanju.58100.com/upload/bg1.png';
+                    }
+                    if($_POST['type'] == 2){
+                        //白色背景
+                        $bg = imagecreatefrompng('https://duanju.58100.com/upload/bg2.png');
+                        //白色背景路径
+                        $bgimg = 'https://duanju.58100.com/upload/bg2.png';
+                    }
+                }else{
+                    //白色背景
+                    $bg = imagecreatefrompng('https://duanju.58100.com/upload/bg1.png');
+                    //白色背景路径
+                    $bgimg = 'https://duanju.58100.com/upload/bg1.png';
+                }
+    
+    
+                $contentimgs = 'https://duanju.58100.com/newadmin/Uploads/'.$content->pic;
+    //            $contentimgs = 'http://127.0.0.1/upload/11.png';
+                $ext = @getimagesize($contentimgs);
+                $exname = explode('/', $ext['mime']);
+                $exnames = $exname[1];
+                switch ($exnames) {
+                    case 'jpg':
+                        $contentimg = imagecreatefromjpeg($contentimgs);
+                        break;
+                    case 'jpeg':
+                        $contentimg = imagecreatefromjpeg($contentimgs);
+                        break;
+                    case 'png':
+                        $contentimg = imagecreatefrompng($contentimgs);
+                        break;
+                }
+    
+                //文章图片
+                $array = @getimagesize($contentimgs);
+                $x_wz = $array[0];//图片宽
+                $y_wz = $array[1];//图片高
+    
+                //白色背景图片
+                $array = @getimagesize($bgimg);
+                $x_bg = $array[0];//图片宽
+                $y_bg = $array[1];//图片高
+    
+                //绘制白色背景图片
+                imagecopyresampled($background, $bg, 0, 0, 0, 0, 1125, 1306, $x_bg, $y_bg);
+    
+                //绘制用户文章背景
+                imagecopyresampled($background, $contentimg, 0, 0, 0, 0, 1125, 1125, $x_wz, $y_wz);
+    
+                //绘制用户头像
+                imagecopyresampled($background, $user_img, 18, 1144, 0, 0, 156, 156, $x2, $y2);
+    
+                //绘制姓名
+                $text1 = $name;
+                ImageTTFText($background, 48, 0, 200, 1200, $black, public_path("./font/simhei.ttf"), $text1);
+    
+    //          imagepng($background);
+                $path = './newadmin/Uploads/userdownload/' . time() . rand(1, 9) . rand(1, 9) . rand(1, 9) . '.jpg';
+                Imagepng($background, $path);
+                ImageDestroy($background);
+                $imgurl = ltrim($path, '.');
+    //            $imgurl = str_replace('/newadmin/Uploads/', '', $imgurl);
+                $arr = [
+                    'status' => 1,
+                    'path' => $imgurl,
+                ];
+    //            return $imgurl;
+            }else{
+                $arr = [
+                    'status' => 0,
+                    'info' => '参数错误',
+                ];
+            }
+            exit(json_encode($arr, JSON_UNESCAPED_UNICODE));
+        }
+
+    //修圆角
+    protected function radiusimg($imgpath, $radius)
+    {
+        $ext = @getimagesize($imgpath);
+        $exname = explode('/', $ext['mime']);
+        $exnames = $exname[1];
+        switch ($exnames) {
+            case 'jpg':
+                $src_img = imagecreatefromjpeg($imgpath);
+                break;
+            case 'jpeg':
+                $src_img = imagecreatefromjpeg($imgpath);
+                break;
+            case 'png':
+                $src_img = imagecreatefrompng($imgpath);
+                break;
+        }
+//        $ext = pathinfo($imgpath);
+//        $src_img = null;
+//        switch ($ext['extension']) {
+//            case 'jpg':
+//                $src_img = imagecreatefromjpeg($imgpath);
+//                break;
+//            case 'png':
+//                $src_img = imagecreatefrompng($imgpath);
+//                break;
+//        }
+        $wh = @getimagesize($imgpath);
+        $w = $wh[0];
+        $h = $wh[1];
+        // $radius = $radius == 0 ? (min($w, $h) / 2) : $radius;
+        $img = imagecreatetruecolor($w, $h);
+        //这一句一定要有
+        imagesavealpha($img, true);
+        //拾取一个完全透明的颜色,最后一个参数127为全透明
+        $bg = imagecolorallocatealpha($img, 255, 255, 255, 127);
+        imagefill($img, 0, 0, $bg);
+        $r = $radius; //圆 角半径
+        for ($x = 0; $x < $w; $x++) {
+            for ($y = 0; $y < $h; $y++) {
+                $rgbColor = imagecolorat($src_img, $x, $y);
+                if (($x >= $radius && $x <= ($w - $radius)) || ($y >= $radius && $y <= ($h - $radius))) {
+                    //不在四角的范围内,直接画
+                    imagesetpixel($img, $x, $y, $rgbColor);
+                } else {
+                    //在四角的范围内选择画
+                    //上左
+                    $y_x = $r; //圆心X坐标
+                    $y_y = $r; //圆心Y坐标
+                    if (((($x - $y_x) * ($x - $y_x) + ($y - $y_y) * ($y - $y_y)) <= ($r * $r))) {
+                        imagesetpixel($img, $x, $y, $rgbColor);
+                    }
+                    //上右
+                    $y_x = $w - $r; //圆心X坐标
+                    $y_y = $r; //圆心Y坐标
+                    if (((($x - $y_x) * ($x - $y_x) + ($y - $y_y) * ($y - $y_y)) <= ($r * $r))) {
+                        imagesetpixel($img, $x, $y, $rgbColor);
+                    }
+                    //下左
+                    $y_x = $r; //圆心X坐标
+                    $y_y = $h - $r; //圆心Y坐标
+                    if (((($x - $y_x) * ($x - $y_x) + ($y - $y_y) * ($y - $y_y)) <= ($r * $r))) {
+                        imagesetpixel($img, $x, $y, $rgbColor);
+                    }
+                    //下右
+                    $y_x = $w - $r; //圆心X坐标
+                    $y_y = $h - $r; //圆心Y坐标
+                    if (((($x - $y_x) * ($x - $y_x) + ($y - $y_y) * ($y - $y_y)) <= ($r * $r))) {
+                        imagesetpixel($img, $x, $y, $rgbColor);
+                    }
+                }
+            }
+        }
+        //header("content-type:image/png");
+        //$radius = './upload/qcode/'. time() . rand(1, 9) . rand(1, 9) . rand(1, 9) . '.jpg';
+        // imagepng($img, $newimg);
+        return $img;
+
     }
 
     /* 文字自动换行

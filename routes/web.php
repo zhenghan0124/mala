@@ -215,6 +215,9 @@ Route::prefix('/home')->group(function () {
     //用户发布过的图片
     Route::any('/index/usercontentlist', 'Home\NewindexController@usercontentlist');
 
+    //首页日签推荐
+    Route::any('/index/daily', 'Home\NewindexController@daily');
+
     //收藏文章（点击收藏）
     Route::any('/index/newcollection', 'Home\NewcontentController@collection');
 
@@ -234,7 +237,22 @@ Route::prefix('/home')->group(function () {
     Route::any('/index/fixedtext', 'Home\NewcontentController@fixedtext');
 
     //画图
-    Route::any('/index/shengcheng', 'Home\NewcontentController@shengcheng');
+    Route::any('/index/downloads', 'Home\NewcontentController@downloads');
+
+
+    //百度小程序接口
+    Route::any('/index/baidu', 'Home\BaiduController@dologin');
+
+    Route::any('/index/baidugetuserinfo', 'Home\BaiduController@getuserinfo');
+
+    Route::any('/index/getAccent_token', 'Home\GetaccesstokenController@information');
+
+    //微信支付
+    Route::any('/index/wxpay', 'Home\WxpayController@wxpay');
+
+    Route::any('/index/testpay', 'Home\TestwxpayController@unifiedorder');
+
+    Route::any('/index/yibu', 'Home\WxpayController@yibu');
 });
 
 

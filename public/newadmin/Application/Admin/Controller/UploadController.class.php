@@ -61,8 +61,8 @@ class UploadController extends CommonController{
   public function attachment(){
     $upload = new \Think\Upload();// 实例化上传类
     $upload->maxSize   =     20971520 ;// 设置附件上传大小
-    $upload->exts      =     array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'zip', 'rar', '7z', 'pdf');// 设置附件上传类型
-    $upload->rootPath  =     './Uploads/'; // 设置附件上传根目录
+    $upload->exts      =     array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'zip', 'rar', '7z', 'pdf', 'mp4');// 设置附件上传类型
+    $upload->rootPath  =     './Uploads/video/'; // 设置附件上传根目录
     $upload->savePath  =     ''; // 设置附件上传（子）目录
     $upload->autoSub   = true;
     $upload->subName   = array('date','Ym');
